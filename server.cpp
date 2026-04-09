@@ -576,6 +576,11 @@ ip::tcp::endpoint connection::getEndpoint(){
 	return endp;
 }
 
+ip::address connection::getAddress(){
+	return this->adress;
+}
+
+
 void connection::sendMSG(std::string send_){
 	if(!send_.size())return;
 	bool ret = false;
@@ -1292,7 +1297,7 @@ void DevInNetwork::FindHandler(){
 unsigned int addConection(ip::tcp::endpoint ep, io_context &io){
 	unsigned int ret = -1;
 	for(int i = 0 ; i < cone.size() ; i++){
-		if(cone[i]->getEndpoint().address() == ep.address()){
+		if(cone[i]->getAddress() == ep.address()){
 			ret=i;
 			break;
 		}
@@ -1318,7 +1323,7 @@ unsigned int addConection(ip::tcp::endpoint ep, io_context &io){
 unsigned int addConection(ip::tcp::socket &skt, io_context &io){
 	unsigned int ret = -1;
 	for(int i = 0 ; i < cone.size() ; i++){
-		if(cone[i]->getEndpoint().address() == skt.remote_endpoint().address()){
+		if(cone[i]->getAddress() == skt.remote_endpoint().address()){
 			ret=i;
 			break;
 		}

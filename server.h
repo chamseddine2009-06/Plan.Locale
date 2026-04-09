@@ -152,7 +152,7 @@ class connection:
 public:
 	std::string name;
 	bool fucsedINn = false;
-	
+	ip::address getAddress();
 	
 	
 	connection(asio::ip::tcp::endpoint endp , io_context &io,std::vector <std::shared_ptr<connection>>& coneBuf);
@@ -176,7 +176,7 @@ public:
 	bool is_open();
 
 	unsigned int getID();
-
+	
 };
 
 
