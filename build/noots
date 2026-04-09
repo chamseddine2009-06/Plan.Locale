@@ -1,0 +1,4 @@
++ you have to allow ports
+
+sudo ufw allow 49152/tcp
+sudo ufw allow 49152/udp
