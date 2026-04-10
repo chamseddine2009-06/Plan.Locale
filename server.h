@@ -139,7 +139,7 @@ class connection:
 	Packat data;
 	friend class server;	
 	unsigned int serverOpnedFromeDestny = 0;
-		
+	ip::tcp::socket* sk;
 
 	
 	int part = 0;

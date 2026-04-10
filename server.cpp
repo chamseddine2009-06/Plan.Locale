@@ -92,8 +92,14 @@ connection::connection (asio::ip::tcp::endpoint endp , io_context &io ,std::vect
 	}).detach();
 	//this->endp = ip::tcp::endpoint(endp.address(),LISNT_PORT);
 	this->adress = endp.address();
+	
 	this->conectionBuf = &coneBuf;
+	
 	this->ID=getUsebelID();
+	
+	this->sk = new ip::tcp::socket(*this->io);
+	this->sk->connect(ip::tcp::endpoint(this->adress,LISNT_PORT));
+
 	//logMsgs("SESTION", "opened @" +this->adress.to_string());
 	//sendPong();
 	return;
@@ -115,6 +121,11 @@ connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std:
 	//*this->skt = std::move(skt);
 	this->conectionBuf = &coneBuf;
 	this->ID=getUsebelID();
+	
+	this->sk = new ip::tcp::socket(*this->io);
+	this->sk->connect(ip::tcp::endpoint(this->adress,LISNT_PORT));
+
+
 	//sendPong();
 	//ping();//hi , can i know your name?
 	//sendPong();//nice , and this is my name
@@ -124,9 +135,10 @@ connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std:
 
 
 connection::~connection(){
-	//closeSocket(*skt);
-	//delete skt;
+	closeSocket(*sk);
+	delete sk;
 	io->stop();
+	delete io;
 }
 	
 
@@ -159,9 +171,9 @@ void connection::sendFile(std::string fileP)
 
 		
 		error_code ec;
-		ip::tcp::socket sk(*io);
-		sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
-		if(ec || !sk.is_open()){
+		//ip::tcp::socket sk(*io);
+		//sk->connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
+		if(ec || !sk->is_open()){
 			logMsgs("ERROR SENDING FILE", ec.message());
 			FREE(mlc);
 			return ;
@@ -201,14 +213,14 @@ void connection::sendFile(std::string fileP)
 
 		memcpy(ms.data, &fms, std::min(sizeof(ms.data) , sizeof(fms)));
 		bool ret = false;
-		sk.write_some(buffer(&ms,PACKAT) , ec );
+		sk->write_some(buffer(&ms,PACKAT) , ec );
 		if(ec){
 			logMsgs("ERROR SENDING FILE", ec.message());
-			closeSocket(sk);
+			//closeSocket(sk);
 			FREE(mlc);
 			return ;
 		}
-		sk.wait(sk.wait_write);
+		sk->wait(sk->wait_write);
 
 		for(int i = 1; i < packsNeed ; i++){
 			memset(fms.data, 0, sizeof(fms.data));
@@ -223,14 +235,14 @@ void connection::sendFile(std::string fileP)
 			memcpy(ms.data, &fms, std::min(sizeof(ms.data) , sizeof(fms)));
 			
 			//logMsgs("WAITING", std::to_string(writ));
-			sk.wait(sk.wait_read);
-			sk.read_some(buffer(&ready,PACKAT));
-			sk.write_some(buffer(&ms,PACKAT));
-			sk.wait(sk.wait_write);
+			sk->wait(sk->wait_read);
+			sk->read_some(buffer(&ready,PACKAT));
+			sk->write_some(buffer(&ms,PACKAT));
+			sk->wait(sk->wait_write);
 			dataWroten+=writ;
 			if(ec){
 				logMsgs("ERROR SENDING FILE", ec.message());
-				closeSocket(sk);
+				//closeSocket(sk);
 				FREE(mlc);
 				return ;
 			}
@@ -241,7 +253,7 @@ void connection::sendFile(std::string fileP)
 		//logMsgs("DONE SENDING","");
 		ifl.close();
 		FREE(mlc);
-		closeSocket(sk);
+		//closeSocket(sk);
 		return ;
 			
 	}).detach();
@@ -261,16 +273,16 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 
 		cont=true;
 		error_code ec;
-		ip::tcp::socket sk(*io);
-		//sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
-		sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT),ec);
-		if(ec || !sk.is_open()){
+		//ip::tcp::socket sk(*io);
+		//sk->connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
+		//sk->connect(ip::tcp::endpoint(this->adress, LISNT_PORT),ec);
+		if(ec || !sk->is_open()){
 			logMsgs("ERROR SENDING IMAGE", ec.message());
 			if(imgData!=nullptr){
 				FREE(imgData);
 				imgData=nullptr;
 			}
-			closeSocket(sk);
+			//closeSocket(sk);
 			return ;
 		}
 		Packat ms;
@@ -297,10 +309,10 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 		dataWroten+=	std::min(Size,(unsigned int)sizeof(ims.data));
 		memcpy(ms.data, &ims, std::min(sizeof(ms.data) , sizeof(ims)));
 		bool ret = false;
-		sk.write_some(buffer(&ms,PACKAT) , ec);
+		sk->write_some(buffer(&ms,PACKAT) , ec);
 		if(ec){
 			logMsgs("ERROR SENDING IMAGE", ec.message());
-			closeSocket(sk);
+			//closeSocket(sk);
 			if(imgData!=nullptr){
 				FREE(imgData);
 				imgData=nullptr;
@@ -324,8 +336,8 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 			//ready.TYPE=0;
 			//while(ready.TYPE!=READY){
 				/*if(!ec){
-					sk.wait(sk.wait_read);
-					sk.read_some(buffer(&ready,PACKAT),ec);
+					sk->wait(sk.wait_read);
+					sk->read_some(buffer(&ready,PACKAT),ec);
 					
 				}else {
 					logMsgs("ERORR SENDING IMAGE", ec.message());
@@ -338,9 +350,9 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 				}*/
 			//}
 			
-			sk.write_some(buffer(&ms,PACKAT),ec);
+			sk->write_some(buffer(&ms,PACKAT),ec);
 			
-			/*if(!ec){sk.wait(sk.wait_write);}
+			/*if(!ec){sk->wait(sk.wait_write);}
 			else{
 				logMsgs("ERROR SENDING IMAGE", ec.message());
 				if(imgData!=nullptr){
@@ -353,7 +365,7 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 			
 			//logMsgs(std::to_string(i), "");	
 		}
-		//sk.wait(sk.wait_write);
+		//sk->wait(sk.wait_write);
 		//FREE(imgData);
 		if(imgData!=nullptr){
 			FREE(imgData);
@@ -361,7 +373,7 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 		}
 		//logMsgs("End Sending");
 		
-		closeSocket(sk);
+		//closeSocket(sk);
 		cont=true;
 		return ;
 	//	}).detach();
@@ -381,12 +393,12 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 		conti = true;	
 			
 		error_code ec;
-		ip::tcp::socket sk(*io);
+		//ip::tcp::socket sk(*io);
 		
-		sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
-		if(ec || !sk.is_open()){
+		//sk->connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
+		if(ec || !sk->is_open()){
 			logMsgs("ERROR SENDING SOUND", ec.message());
-			closeSocket(sk);
+			//closeSocket(sk);
 			if(data!=nullptr){
 				FREE(data);
 				data=nullptr;
@@ -416,17 +428,17 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 		dataWroten+=	std::min(Size,(unsigned int)sizeof(sms.data));
 		memcpy(ms.data, &sms, std::min(sizeof(ms.data) , sizeof(sms)));
 		bool ret = false;
-		sk.write_some(buffer(&ms,PACKAT) , ec);
+		sk->write_some(buffer(&ms,PACKAT) , ec);
 		if(ec){
 			logMsgs("ERROR SENDING SOUND", ec.message());
-			closeSocket(sk);
+			//closeSocket(sk);
 			if(data!=nullptr){
 				FREE(data);
 				data=nullptr;
 			}
 			return ;
 		}
-		//sk.wait(sk.wait_write);
+		//sk->wait(sk.wait_write);
 
 		for(int i = 1; i < packsNeed  && data!=nullptr; i++){
 			memset(sms.data, 0, sizeof(sms.data));
@@ -441,8 +453,8 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 			ready.TYPE=0;
 			//while(ready.TYPE!=READY){
 				/*if(!ec){
-					sk.wait(sk.wait_read);
-					sk.read_some(buffer(&ready,PACKAT),ec);
+					sk->wait(sk.wait_read);
+					sk->read_some(buffer(&ready,PACKAT),ec);
 				}
 				else {
 					logMsgs("ERROR SENDING SOUND", ec.message());
@@ -455,13 +467,13 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 				}*/
 				
 			//}
-			sk.write_some(buffer(&ms,PACKAT),ec);
+			sk->write_some(buffer(&ms,PACKAT),ec);
 			
-			//if(!ec){sk.wait(sk.wait_write);}
+			//if(!ec){sk->wait(sk.wait_write);}
 			dataWroten+=writ;
 			if(ec){
 				logMsgs("ERROR SENDING SOUND", ec.message());
-				closeSocket(sk);
+				//closeSocket(sk);
 				if(data!=nullptr){
 					FREE(data);
 					data=nullptr;
@@ -475,7 +487,7 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 			data=nullptr;
 		}
 		
-		closeSocket(sk);
+		//closeSocket(sk);
 		return ;
 	//});
 	//}).detach();
@@ -485,7 +497,7 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 
 
 void connection::sendClose(){
-	ip::tcp::socket sk(*io);
+	//ip::tcp::socket sk(*io);
 
 	error_code ec;
 	Packat msg ;
@@ -493,7 +505,7 @@ void connection::sendClose(){
 	msg.Mgic =MAGIC;
 	msg.msgL = 0;
 	bool ret = false;
-	sk.connect(ip::tcp::endpoint(adress , LISNT_PORT) , ec);
+	//sk->connect(ip::tcp::endpoint(adress , LISNT_PORT) , ec);
 	if(ec){
 		logMsgsErr(ec.message());
 		ret=true;
@@ -501,12 +513,12 @@ void connection::sendClose(){
 	if(ret||ec){
 		return ;;
 	}
-	sk.write_some(buffer(&msg , PACKAT) ,ec);
+	sk->write_some(buffer(&msg , PACKAT) ,ec);
 	if(ec){
 		logMsgsErr(ec.message());
 		ret=true;
 	}
-	closeSocket(sk);
+	//closeSocket(sk);
 	return;
 }
 
@@ -527,7 +539,7 @@ void connection::Close(){
 void connection::ping(){
 	//if(pingThread.joinable())pingThread.join();
 	//std::thread([=](){	
-		ip::tcp::socket sk(*io);
+		//ip::tcp::socket sk(*io);
 	
 		error_code ec;
 		Packat msg ;
@@ -538,7 +550,7 @@ void connection::ping(){
 		bool ret = false;
 		//unsigned int startT = (clock()*1000)/CLOCKS_PER_SEC;
 		//unsigned int timeGiveUp = 5000;//give up after 5 ms
-		sk.connect(ip::tcp::endpoint(adress , LISNT_PORT) , ec);
+		//sk->connect(ip::tcp::endpoint(adress , LISNT_PORT) , ec);
 		if(ec){
 			logMsgsErr(ec.message());
 			ret=true;
@@ -546,7 +558,7 @@ void connection::ping(){
 		if(ret||ec){
 			return ;;
 		}
-		sk.write_some(buffer(&msg , PACKAT) ,ec);
+		sk->write_some(buffer(&msg , PACKAT) ,ec);
 		if(ec){
 			logMsgsErr(ec.message());
 			ret=true;
@@ -554,9 +566,9 @@ void connection::ping(){
 		if(ret || ec){
 			return ;;
 		}
-		sk.wait(sk.wait_read);
+		sk->wait(sk->wait_read);
 
-		sk.read_some(buffer(&msg,PACKAT),ec);
+		sk->read_some(buffer(&msg,PACKAT),ec);
 		if(ec){
 			logMsgsErr(ec.message());
 			ret=true;
@@ -570,7 +582,7 @@ void connection::ping(){
 			name.push_back(msg.data[i]);
 		}
 		//logMsgs(name,"==================================================================>>>>>");
-		closeSocket(sk);
+		//closeSocket(sk);
 	//}).detach();
 }
 
@@ -594,8 +606,8 @@ void connection::sendMSG(std::string send_){
 		std::string send = send_;
 		
 		error_code ec;
-		ip::tcp::socket sk(*io);
-		sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT), ec);
+		//ip::tcp::socket sk(*io);
+		//sk->connect(ip::tcp::endpoint(this->adress, LISNT_PORT), ec);
 		if(ec){
 			logMsgs("ERORR SENDING", ec.message());
 			return ;
@@ -607,7 +619,7 @@ void connection::sendMSG(std::string send_){
 		ms.msgl=send.size();
 		unsigned int packN =(send.size()+sizeof(Message::msg)-1)/sizeof(Message::msg);
 		
-		for(int i = 0 ; i < packN  && sk.is_open(); i++ ){
+		for(int i = 0 ; i < packN  && sk->is_open(); i++ ){
 			
 			ms.packN = i;
 			ms.msgl=send.size();
@@ -619,19 +631,19 @@ void connection::sendMSG(std::string send_){
 			//for(int i =0 ; i < sizeof(ms->msg) ; i++)std::cout<<ms->msg[i];
 			try{
 			
-				sk.write_some(buffer(&msg,PACKAT) ,ec);
+				sk->write_some(buffer(&msg,PACKAT) ,ec);
 				if(ec){
 					logMsgs("ERORR SENDING", ec.message());
-					closeSocket(sk);
+					//closeSocket(sk);
 					return ;
 				}
-				//sk.wait(sk.wait_write);
+				//sk->wait(sk.wait_write);
 				
 			}catch (system_error err){
 				logMsgsErr(err.what());
 			}
 		}
-		closeSocket(sk);
+		//closeSocket(sk);
 		return ;
 
 	//});
@@ -645,22 +657,22 @@ void connection::sendPong(){
 	Pong.Mgic=MAGIC;
 	memcpy(Pong.data, user_name.c_str(), sendS);//it will be beter , if we send a warning her
 	std::error_code ec;
-	ip::tcp::socket sk(*io);
+	//ip::tcp::socket sk(*io);
 	std::error_code e;
-	sk.connect(ip::tcp::endpoint(adress,LISNT_PORT), e);
+	//sk->connect(ip::tcp::endpoint(adress,LISNT_PORT), e);
 	if(e){
 		logMsgs("ERORR SENDING PONG", e.message());
-		closeSocket(sk);
+		//closeSocket(sk);
 		return;
 	}
-	sk.write_some(buffer(&Pong,PACKAT),e);
+	sk->write_some(buffer(&Pong,PACKAT),e);
 	if(e){
 		logMsgsErr(e.message());
-		closeSocket(sk);
+		//closeSocket(sk);
 		return;
 	}
-	sk.wait(sk.wait_write);
-	closeSocket(sk);
+	sk->wait(sk->wait_write);
+	//closeSocket(sk);
 	return;
 	
 }
