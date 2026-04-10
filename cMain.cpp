@@ -73,8 +73,7 @@ wxBitmap Mat2Bitmap(cv::Mat& frame){
 }
 
 
-
-cMain::cMain() : wxFrame(nullptr,wxID_ANY , "LocalPlan" , wxDefaultPosition , wxSize(1200,800)){
+cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , wxSize(1200,800)){
 	
 	satingswindow = new Satings(satingsOpen);
 	//Menus***********************************************************************
@@ -293,7 +292,9 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "LocalPlan" , wxDefaultPosition , wx
 					cv::cvtColor(frame, normalRGB, cv::COLOR_BGR2RGB);
 					//std::cout<<"\nSending Image to " << CleintDevID;
 					if(!g_isTacher && CleintDevID!=-1 && getConPos(this->CleintDevID)!=-1 ){	
-						cone[getConPos(this->CleintDevID)]->sendImage(normalRGB.rows, normalRGB.cols, (unsigned char*)normalRGB.data);
+						std::thread([=]{
+							cone[getConPos(this->CleintDevID)]->sendImage(normalRGB.rows, normalRGB.cols, (unsigned char*)normalRGB.data);
+						}).join();
 					}else if (g_isTacher){
 						for(int i = 0 ; i < cone.size() ; i++){
 							unsigned int IDoftarget = cone[i]->getID();
@@ -301,14 +302,14 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "LocalPlan" , wxDefaultPosition , wx
 							unsigned int widt = normalRGB.cols;
 							char* image = (char*)malloc(heih*widt*3);
 							memcpy(image, normalRGB.data,heih*widt*3);
-							//std::thread([this,heih,widt,image,i,IDoftarget](){
+							std::thread([this,heih,widt,image,i,IDoftarget](){
 								if( i < cone.size() && cone[i]->getID() == IDoftarget){
 									cone[i]->sendImage(heih, widt, (unsigned char*)image);
 
 								}
 								free(image);
 								return ;
-							//}).join();
+							}).join();
 						}
 					}
 					//imageScreen->SetBitmap( bmp);
@@ -387,21 +388,24 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "LocalPlan" , wxDefaultPosition , wx
 		}
 		return ;
 	};
+	
 	readSoundFromMicrophoneHandler = [&](float* r , unsigned int bufferL){
 		if(!g_isTacher && this->CleintDevID != -1 && this->allowSoundRecording && getConPos(this->CleintDevID)!=-1){
-			//cone[getConPos(this->CleintDevID)]->sendSound(r, bufferL);
+			cone[getConPos(this->CleintDevID)]->sendSound(r, bufferL);
+
 		}else if(g_isTacher && allowSoundRecording){
-			for(int i = 0 ; i < cone.size() ; i++){
-				unsigned int id = cone[i]->getID();
-				float* cpAu =(float*) malloc(bufferL*4);
-				memcpy(cpAu, r, bufferL*4);
-				std::thread([=](){
+			float* cpAu =(float*) malloc(bufferL*4);	
+			memcpy(cpAu, r, bufferL*4);
+			std::thread([=](){
+				for(int i = 0 ; i < cone.size() ; i++){
+					unsigned int id = cone[i]->getID();
 					if(i < cone.size() && id==cone[i]->getID() && getConPos(id)!=-1){
-						//cone[i]->sendSound(cpAu, bufferL);
+						cone[i]->sendSound(cpAu, bufferL);
 					}
-					free(cpAu);
-				}).detach();
-			}
+				}
+				
+				free(cpAu);
+			}).detach();
 		}
 		return ;
 	};
@@ -444,7 +448,7 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "LocalPlan" , wxDefaultPosition , wx
 			msg .append(" send file : \n\"");
 			msg.append(fn);
 			msg.append( "\" - " + std::to_string(size) + " byte");
-			wxMessageBox((wxString)msg);
+			wxMessageBox((wxString::FromUTF8(msg.c_str())) );
 
 		});
 		return ;
@@ -466,6 +470,9 @@ cMain::~cMain(){
 
 	if(this->DevsListThread.joinable()){
 		this->DevsListThread.join();
+	}
+	if(thrd.joinable()){
+		thrd.join();
 	}
 
 }
@@ -529,7 +536,7 @@ void cMain::OnSendFileButton(wxCommandEvent& evt){
 	}
 	wxFileDialog fdg(this , "Send File" , "","",".* File (*.*)|*.*",wxFD_OPEN|wxFD_FILE_MUST_EXIST);
 	if(fdg.ShowModal()==wxID_OK){
-		cone[this->CleintDevID]->sendFile((std::string)fdg.GetPath());
+		cone[this->CleintDevID]->sendFile((std::string)fdg.GetPath().ToUTF8().data());
 	}
 	return;
 }

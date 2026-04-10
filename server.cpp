@@ -8,6 +8,7 @@
 #include <asio/impl/config.hpp>
 #include <asio/io_context.hpp>
 #include <asio/ip/tcp.hpp>
+#include <asio/post.hpp>
 #include <asio/registered_buffer.hpp>
 #include <cmath>
 #include <cstdlib>
@@ -93,7 +94,7 @@ connection::connection (asio::ip::tcp::endpoint endp , io_context &io ,std::vect
 	this->adress = endp.address();
 	this->conectionBuf = &coneBuf;
 	this->ID=getUsebelID();
-	logMsgs("SESTION", "opened @" + this->adress.to_string());
+	//logMsgs("SESTION", "opened @" +this->adress.to_string());
 	//sendPong();
 	return;
 
@@ -117,7 +118,7 @@ connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std:
 	//sendPong();
 	//ping();//hi , can i know your name?
 	//sendPong();//nice , and this is my name
-	logMsgs("SESTION", "opened @" + this->adress.to_string());
+	//logMsgs("SESTION", "opened @" + this->adress.to_string());
 }	
 	
 
@@ -134,12 +135,11 @@ connection::~connection(){
 
 void connection::sendFile(std::string fileP)
 {
-	std::filesystem::path fp(fileP);
 	if(m_close)return;
 	std::thread([=](){
+		std::filesystem::path fp(fileP);
 		std::ifstream ifl(fileP ,std::ios::in|std::ios::app|std::ios::ate);
 		const unsigned int fileS = ifl.tellg();
-		ifl.seekg(0);
 		//logMsgs("MSFILE SIZE", std::to_string(fileS));
 		std::string fileName = fp.filename();
 			
@@ -153,6 +153,8 @@ void connection::sendFile(std::string fileP)
 			FREE(mlc);
 			return;
 		}
+		
+		ifl.seekg(0);
 		ifl.read(mlc, fileS);
 
 		
@@ -261,9 +263,7 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 		error_code ec;
 		ip::tcp::socket sk(*io);
 		//sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT) , ec);
-		logMsgs("SEND IMG");
 		sk.connect(ip::tcp::endpoint(this->adress, LISNT_PORT),ec);
-		logMsgs("SI CONECET");
 		if(ec || !sk.is_open()){
 			logMsgs("ERROR SENDING IMAGE", ec.message());
 			if(imgData!=nullptr){
@@ -310,7 +310,6 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 		
 
 		for(int i = 1; i < packsNeed  && imgData!=nullptr; i++){
-			std::cout<<"w";
 			memset(ims.data, 0, sizeof(ims.data));
 			memset(ms.data, 0, sizeof(ms.data));
 
@@ -354,7 +353,7 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 			
 			//logMsgs(std::to_string(i), "");	
 		}
-		sk.wait(sk.wait_write);
+		//sk.wait(sk.wait_write);
 		//FREE(imgData);
 		if(imgData!=nullptr){
 			FREE(imgData);
@@ -374,6 +373,7 @@ void connection::sendImage(unsigned int hight , unsigned int width , unsigned ch
 void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing break , this is mybe the cuse
 	bool conti = false;
 	//std::thread([&](){
+	//post(*io,[&](){
 		if(m_close)return;
 		unsigned int Size = ln*4;
 		float* data = (float*)malloc(Size);	
@@ -393,7 +393,6 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 			}
 			return ;
 		}
-		logMsgs("SENDING SOUND");
 		Packat ms;
 		SoundMs sms; //some remember a thing rigth now
 		
@@ -427,7 +426,7 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 			}
 			return ;
 		}
-		sk.wait(sk.wait_write);
+		//sk.wait(sk.wait_write);
 
 		for(int i = 1; i < packsNeed  && data!=nullptr; i++){
 			memset(sms.data, 0, sizeof(sms.data));
@@ -458,7 +457,7 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 			//}
 			sk.write_some(buffer(&ms,PACKAT),ec);
 			
-			if(!ec){sk.wait(sk.wait_write);}
+			//if(!ec){sk.wait(sk.wait_write);}
 			dataWroten+=writ;
 			if(ec){
 				logMsgs("ERROR SENDING SOUND", ec.message());
@@ -478,6 +477,7 @@ void connection::sendSound(float* data__ , unsigned int ln){//NOTE:if somthing b
 		
 		closeSocket(sk);
 		return ;
+	//});
 	//}).detach();
 	//while(!conti){}
 	return;
@@ -501,7 +501,7 @@ void connection::sendClose(){
 	if(ret||ec){
 		return ;;
 	}
-	sk.write_some(buffer(&msg , sizeof(msg)) ,ec);
+	sk.write_some(buffer(&msg , PACKAT) ,ec);
 	if(ec){
 		logMsgsErr(ec.message());
 		ret=true;
@@ -515,10 +515,12 @@ void connection::Close(){
 	unsigned int pos = getVecPos();
 	if(pos!=-1){
 		m_close=true;
+		io->stop();
 		conectionBuf->erase(conectionBuf->begin() + pos);
 	}else{
 		logMsgsErr("CONCTION OBJECT , nevr found his selfe :(");
 	}
+	io->stop();
 	return;
 }
 
@@ -534,8 +536,8 @@ void connection::ping(){
 		msg.msgL = 0;
 		//memset(msg.data, 0, sizeof(msg.data));
 		bool ret = false;
-		unsigned int startT = (clock()*1000)/CLOCKS_PER_SEC;
-		unsigned int timeGiveUp = 5000;//give up after 5 ms
+		//unsigned int startT = (clock()*1000)/CLOCKS_PER_SEC;
+		//unsigned int timeGiveUp = 5000;//give up after 5 ms
 		sk.connect(ip::tcp::endpoint(adress , LISNT_PORT) , ec);
 		if(ec){
 			logMsgsErr(ec.message());
@@ -544,7 +546,7 @@ void connection::ping(){
 		if(ret||ec){
 			return ;;
 		}
-		sk.write_some(buffer(&msg , sizeof(msg)) ,ec);
+		sk.write_some(buffer(&msg , PACKAT) ,ec);
 		if(ec){
 			logMsgsErr(ec.message());
 			ret=true;
@@ -554,7 +556,7 @@ void connection::ping(){
 		}
 		sk.wait(sk.wait_read);
 
-		sk.read_some(buffer(&msg,sizeof(msg)),ec);
+		sk.read_some(buffer(&msg,PACKAT),ec);
 		if(ec){
 			logMsgsErr(ec.message());
 			ret=true;
@@ -563,7 +565,7 @@ void connection::ping(){
 			return ;;
 		}
 
-		name = "";
+		name.clear();
 		for(int i = 0 ; i < msg.msgL ; i++){
 			name.push_back(msg.data[i]);
 		}
@@ -625,7 +627,6 @@ void connection::sendMSG(std::string send_){
 				}
 				//sk.wait(sk.wait_write);
 				
-
 			}catch (system_error err){
 				logMsgsErr(err.what());
 			}
@@ -641,6 +642,7 @@ void connection::sendPong(){
 	Packat Pong;
 	unsigned int sendS = std::min(sizeof(Packat::data) , user_name.size());
 	Pong.msgL = sendS;
+	Pong.Mgic=MAGIC;
 	memcpy(Pong.data, user_name.c_str(), sendS);//it will be beter , if we send a warning her
 	std::error_code ec;
 	ip::tcp::socket sk(*io);
@@ -651,7 +653,7 @@ void connection::sendPong(){
 		closeSocket(sk);
 		return;
 	}
-	sk.write_some(buffer(&Pong,PACK_HS+sendS),e);
+	sk.write_some(buffer(&Pong,PACKAT),e);
 	if(e){
 		logMsgsErr(e.message());
 		closeSocket(sk);
@@ -722,7 +724,6 @@ unsigned int server::getVecPos(){
 	return 0;
 }
 void server::pingHandler(){
-	std::cout<<"GET A ping \n";
 	error_code ec;	
 	Packat msg ;
 
@@ -734,9 +735,10 @@ void server::pingHandler(){
 	try{
 			
 		if(skt->is_open() && !ec){
-			skt->write_some(buffer(&msg , user_name.size() +PACK_HS),ec);
+			skt->write_some(buffer(&msg , PACKAT/*user_name.size() +PACK_HS*/),ec);
 			if(!ec){
 				skt->wait(skt->wait_write);
+
 			}
 		}
 		else if(ec){
@@ -904,7 +906,7 @@ void server::ImageHandler(){
 		if(e){
 			logMsgs("ERROR IN SENDING READY", e.message());
 		}else{
-			skt->wait(skt->wait_write);
+			//skt->wait(skt->wait_write);
 		}
 	}
 	return;
@@ -952,7 +954,7 @@ void server::SondeHandler(){
 		if(e){
 			logMsgs("ERROR IN SENDING READY", e.message());
 		}else {
-			skt->wait(skt->wait_write);
+			//skt->wait(skt->wait_write);
 
 		}
 	}
@@ -1056,38 +1058,32 @@ void server::readHandler(){
 		asio::async_read(*skt,buffer(data,PACKAT) , [=](error_code ec, size_t leng){
 			if(!ec){
 				
-					if(skt->is_open()){
-							if(MsgIsIt(PING)) { // is it ping? if is it send pong
-								logMsgs("GET A PING");
-								pingHandler();
-							}else if(MsgIsIt(PONG)){
-								conction->name.clear();
-								for(int i =0 ; i < data->msgL ; i++ ){
-									conction->name.push_back(data->data[i]);
-								}
-								logMsgs("PONG", "sended by " + this->conction->name);
-							}
-	
-							else if (MsgIsIt(MESSAGE)){
-								logMsgs("GET A MESSAGE");
-								MessageHandler();
-							}
-							else if(MsgIsIt(MSFILE)){
-								logMsgs("GET A FILE");
-								FileHandler();
-							}else if (MsgIsIt(IMAGE)) {
-								//logMsgs("GET A IMAGE");
-								std::cout<<"i";
-								ImageHandler();
-							}else if (MsgIsIt(SOUND)) {
-								//logMsgs("GET A SOUND");
-								SondeHandler();
-							}else if(MsgIsIt(CLOSE)){
-								//logMsgs("Dead for your father", "");
-								CloseHandler();//kill your famely
-								return ;
-							}					
+				if(skt->is_open()){
+					if(MsgIsIt(PING)) { // is it ping? if is it send pong
+						pingHandler();
+					}else if(MsgIsIt(PONG)){
+						conction->name.clear();
+						for(int i =0 ; i < data->msgL ; i++ ){
+							conction->name.push_back(data->data[i]);
+						}
 					}
+
+					else if (MsgIsIt(MESSAGE)){
+						MessageHandler();
+					}
+					else if(MsgIsIt(MSFILE)){
+						FileHandler();
+					}else if (MsgIsIt(IMAGE)) {
+						//logMsgs("GET A IMAGE");
+						ImageHandler();
+					}else if (MsgIsIt(SOUND)) {
+						SondeHandler();
+					}else if(MsgIsIt(CLOSE)){
+						//logMsgs("Dead for your father", "");
+						CloseHandler();//kill your famely
+						return ;
+					}					
+				}
 				
 			}else{
 				if(ec.value() == asio::error::eof){
@@ -1161,9 +1157,7 @@ server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_cont
 	}
 	this->ID = ID;
 	this->conction->serverOpnedFromeDestny++;
-	logMsgs("OPEN SERVER","@ID #"+std::to_string(ID) );
 	readHandler();
-	//so, you have to do it by your selfe
 }
 
 server::~server(){
@@ -1273,8 +1267,8 @@ void DevInNetwork::connect(){
 							}
 							logMsgs("FIND", name);
 							FindHandler();
-							closeSocket(*skt);
 							//connect();
+							closeSocket(*skt);
 						}
 					});
 				}
@@ -1348,7 +1342,7 @@ void addServer(ip::tcp::socket &skt, io_context &Oio , io_context& Iio){
 	unsigned int c = addConection(skt , Oio);
 	//std::shared_ptr<server> svr = std::make_shared<server>(skt , cone[c],io , servers , servers.size());
 	unsigned int emP = servers.size();
-	servers.push_back(std::make_shared<server>(skt , cone[c],Iio , servers , servers.size()));
+	servers.emplace_back(std::make_shared<server>(skt , cone[c],Iio , servers , servers.size()));
 	return ;
 }
 
@@ -1358,7 +1352,7 @@ void ClientHandl(asio::ip::tcp::acceptor &accept , io_context& Oio , io_context&
 			[&](std::error_code ec , asio::ip::tcp::socket socket)
 			{
 				if(!ec){
-					std::cout<<"Cleint connect! @" << servers.size() << "\n";
+					//std::cout<<"Cleint connect! @" << servers.size() << "\n";
 					addServer(socket,Oio, Iio); 
 
 

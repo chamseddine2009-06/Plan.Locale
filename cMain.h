@@ -115,7 +115,8 @@ public:
 	unsigned int CleintDevID=-1;
 	wxTextCtrl* msgTB;
 	
-	
+		
+	std::thread thrd ;
 	wxButton* bt; 
 	unsigned int ConectionsNumber= 0;
 

@@ -1,5 +1,7 @@
-#include <array>
+#include <cstdlib>
+#include <cstring>
 #include <functional>
+#include <thread>
 #define SOUND_IO_CPP
 #include "soundIO.hpp"
 #include "utils.hpp"
@@ -8,7 +10,8 @@
 
 
 #define SAMPEL_RATE 44100
-#define FRAME_PER_BUFFUER 1024
+#define CHANEL_NUMBER 2
+#define FRAME_PER_BUFFUER (PACKAT - PACK_HS - 8 )/16
 
 
 
@@ -25,19 +28,47 @@ PaStreamParameters outputParm;
 
 PaStreamParameters fakeIPar;
 
+float* g_soundRecorded = nullptr;
+bool g_soundHaveBeenRecorde = false;
+bool g_soundThreadSholdStop = false;
+
+std::thread g_ReacordingThread;
+
+
+
+void soundThreadFunction(){
+	while(!g_soundThreadSholdStop){
+		if(g_soundRecorded == nullptr || !g_soundHaveBeenRecorde){continue;}
+		readSoundFromMicrophoneHandler(g_soundRecorded,FRAME_PER_BUFFUER*CHANEL_NUMBER);
+		g_soundHaveBeenRecorde=false;
+
+	}
+}
 
 
 std::function<void(float* r , unsigned int lng)> readSoundFromMicrophoneHandler = [](auto,auto){return ;};
 
 
-
+#define SEND_MAX_DES 0.02
 
 
 static int paCallBackReadFromMocrophone(const void* inBuf , void* outBuf , unsigned long framesPerBuf  ,
 		const PaStreamCallbackTimeInfo* timeInfo , PaStreamCallbackFlags statusFlag , void* userData)
 {
-	//for(int i = 0 ; i < framesPerBuf*2 ; i++)((float*)outBuf)[i] = ((float*)inBuf)[i];;
-	readSoundFromMicrophoneHandler((float*)inBuf,framesPerBuf*2);	
+	float maxDes = 0.0;
+	for(int i = 0 ; i < framesPerBuf*2 ; i++){
+		if(((float*)inBuf)[i] >= maxDes){
+			maxDes=((float*)inBuf)[i];
+		}
+	}
+	
+	if(maxDes >= SEND_MAX_DES){
+		if(g_soundRecorded == nullptr){
+			g_soundRecorded = (float*)malloc(FRAME_PER_BUFFUER*CHANEL_NUMBER*sizeof(float));
+		}
+		memcpy(g_soundRecorded, inBuf, FRAME_PER_BUFFUER*CHANEL_NUMBER*sizeof(float));
+		g_soundHaveBeenRecorde=true;
+	}
 	/*for(int i = 0 ; i < framesPerBuf*2 ; i++ ){
 		dataToPlay.push_back(((float*)inBuf)[i]);
 
@@ -83,6 +114,8 @@ void soundIOInit(){
 	memset(&outputParm , 0 , sizeof(outputParm));
 	MicrophoneInit();
 	SpeakersInit();
+	g_ReacordingThread = std::thread(soundThreadFunction);	
+
 }
 
 
@@ -95,6 +128,10 @@ void soundIOStop(){
 	if(devRec!=-1){
 		PAErr(Pa_StopStream(inputStream));
 		PAErr(Pa_CloseStream(inputStream));
+	}
+	g_soundThreadSholdStop=true;
+	if(g_ReacordingThread.joinable()){
+		g_ReacordingThread.join();
 	}
 	
 	PAErr(Pa_Terminate());

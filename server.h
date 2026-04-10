@@ -40,7 +40,7 @@ using namespace asio;
 
 
 
-#define LISNT_PORT 4152
+#define LISNT_PORT 49152//40152
 
 
 #define PING    0
@@ -139,7 +139,7 @@ class connection:
 	Packat data;
 	friend class server;	
 	unsigned int serverOpnedFromeDestny = 0;
-	
+		
 
 	
 	int part = 0;

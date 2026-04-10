@@ -19,7 +19,12 @@ cApp::~cApp(){
 	for(int i = 0 ; i < cone.size() ; i++){
 		cone[i]->sendClose();
 	}
-
+	for(int i = servers.size()-1 ; i>=0 ; i--){
+		servers[i]->close();
+	}
+	for(int i = cone.size()-1 ; i>=0 ; i--){
+		cone[i]->Close();
+	}
 	contextIN->stop();//thank you for your sevice , ASIO
 	contextOUT->stop();
 	if(IContextThr.joinable()){
@@ -67,9 +72,9 @@ bool cApp::OnInit(){
 	}else{
 		
 		updateLogs();
-		std::thread([&](){		
+		//std::thread([&](){		
 			dicover(*contextOUT, networkDiscoverBase, networkDiscoverEnd);
-		}).detach();
+		//}).detach();
 		soundIOInit();
 		frame1 = new cMain();
 		frame1->Show();
