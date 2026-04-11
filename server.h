@@ -135,7 +135,9 @@ class connection:
 	//asio::ip::tcp::socket *skt=nullptr;
 	asio::ip::tcp::endpoint endp;
 	asio::ip::address adress;
+	
 	asio::io_context* io=nullptr;
+	
 	Packat data;
 	friend class server;	
 	unsigned int serverOpnedFromeDestny = 0;

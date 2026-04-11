@@ -81,15 +81,12 @@ void closeSocket(ip::tcp::socket& skt){
 
 
 
-connection::connection (asio::ip::tcp::endpoint endp , io_context &io ,std::vector <std::shared_ptr<connection>>& coneBuf)
+connection::connection (asio::ip::tcp::endpoint endp , io_context &io____ ,std::vector <std::shared_ptr<connection>>& coneBuf)
 {
 	//skt = new ip::tcp::socket(io);	
 	//this->io = &io;
 	this->io = new io_context();
-	auto ll = make_work_guard(*this->io);
-	std::thread([&](){
-		this->io->run();
-	}).detach();
+	
 	//this->endp = ip::tcp::endpoint(endp.address(),LISNT_PORT);
 	this->adress = endp.address();
 	
@@ -102,6 +99,12 @@ connection::connection (asio::ip::tcp::endpoint endp , io_context &io ,std::vect
 
 	//logMsgs("SESTION", "opened @" +this->adress.to_string());
 	//sendPong();
+	std::thread([&](){
+		auto ll = make_work_guard(*this->io);
+		this->io->run();
+	}).detach();
+	
+	//post(*io,[](){logMsgs("ERRRRRRRRRRRRRRRRRRRRRRR");});
 	return;
 
 }
@@ -109,7 +112,7 @@ connection::connection (asio::ip::tcp::endpoint endp , io_context &io ,std::vect
 
 
 	
-connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std::shared_ptr<connection>>& coneBuf){
+connection::connection(ip::tcp::socket& skt , io_context &io____ , std::vector <std::shared_ptr<connection>>& coneBuf){
 	//this->skt = new ip::tcp::socket(io);
 	this->io = new io_context();
 	auto kk = make_work_guard(*this->io);
@@ -127,7 +130,7 @@ connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std:
 
 
 	//sendPong();
-	//ping();//hi , can i know your name?
+//ping();//hi , can i know your name?
 	//sendPong();//nice , and this is my name
 	//logMsgs("SESTION", "opened @" + this->adress.to_string());
 }	
@@ -1072,8 +1075,10 @@ void server::readHandler(){
 				
 				if(skt->is_open()){
 					if(MsgIsIt(PING)) { // is it ping? if is it send pong
+						logMsgs("PING");
 						pingHandler();
 					}else if(MsgIsIt(PONG)){
+						logMsgs("PONG");
 						conction->name.clear();
 						for(int i =0 ; i < data->msgL ; i++ ){
 							conction->name.push_back(data->data[i]);
@@ -1138,7 +1143,7 @@ void server::readHandler(){
 						this->resevedData=nullptr;
 					}
 					this->conction->serverOpnedFromeDestny--;
-					io->stop();
+					//io->stop();
 					vecy->erase(vecy->begin()+entry);
 				}
 				return ;
@@ -1155,15 +1160,14 @@ void server::readHandler(){
 
 
 server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_context& io , std::vector<std::shared_ptr<server>>& vec , unsigned int entry){
-	this->io = new io_context();
-	std::thread([&](){
-		make_work_guard(*this->io);
+	/*this->io = new io_context();
+	auto l =make_work_guard(*this->io);
+	std::thread([=](){
 		this->io->run();
-	}).detach();
+	}).detach();*/
 
-	this->skt=new ip::tcp::socket(*this->io);
-	int fd = skt.release();
-	this->skt->assign(ip::tcp::v4() , fd);
+	logMsgs("CREAT SERVER",skt.remote_endpoint().address().to_string());
+	
 		
 	//*this->skt = std::move(skt);
 	this->conction = con;
@@ -1180,8 +1184,11 @@ server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_cont
 	this->ID = ID;
 	this->conction->serverOpnedFromeDestny++;
 	
-
-
+	unsigned int fd = skt.release();
+	
+	this->skt=new ip::tcp::socket(*this->conction->io);
+	this->skt->assign(ip::tcp::v4() , fd);
+	post(*this->conction->io,[](){logMsgs("IT IS A BIG ONE");});
 	readHandler();
 }
 
@@ -1216,7 +1223,7 @@ server::~server(){
 		//FREE(skt);
 		delete skt;
 		isOpen=false;
-		io->stop();
+		//io->stop();
 	}
 	return;
 }
@@ -1294,7 +1301,7 @@ void DevInNetwork::connect(){
 							logMsgs("FIND", name);
 							FindHandler();
 							//connect();
-							closeSocket(*skt);
+							//closeSocket(*skt);
 						}
 					});
 				}
@@ -1356,7 +1363,7 @@ unsigned int addConection(ip::tcp::socket &skt, io_context &io){
 		ret = cone.size();
 		//std::shared_ptr<connection> conc = std::make_shared<connection>(skt,io,ID);
 		//cone.push_back(conc);
-		cone.emplace_back(std::make_shared<connection>(skt,io,cone));
+		cone.emplace_back(std::make_shared<connection>(skt.remote_endpoint(),io,cone));
 		//conc->ping();
 		//conc->readHandler();
 
