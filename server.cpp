@@ -1138,6 +1138,7 @@ void server::readHandler(){
 						this->resevedData=nullptr;
 					}
 					this->conction->serverOpnedFromeDestny--;
+					io->stop();
 					vecy->erase(vecy->begin()+entry);
 				}
 				return ;
@@ -1154,8 +1155,17 @@ void server::readHandler(){
 
 
 server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_context& io , std::vector<std::shared_ptr<server>>& vec , unsigned int entry){
-	this->skt=new ip::tcp::socket(io);
-	*this->skt = std::move(skt);
+	this->io = new io_context();
+	std::thread([&](){
+		make_work_guard(*this->io);
+		this->io->run();
+	}).detach();
+
+	this->skt=new ip::tcp::socket(*this->io);
+	int fd = skt.release();
+	this->skt->assign(ip::tcp::v4() , fd);
+		
+	//*this->skt = std::move(skt);
 	this->conction = con;
 	vecy = &vec;
 	isOpen=true;
@@ -1169,6 +1179,9 @@ server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_cont
 	}
 	this->ID = ID;
 	this->conction->serverOpnedFromeDestny++;
+	
+
+
 	readHandler();
 }
 
@@ -1203,6 +1216,7 @@ server::~server(){
 		//FREE(skt);
 		delete skt;
 		isOpen=false;
+		io->stop();
 	}
 	return;
 }

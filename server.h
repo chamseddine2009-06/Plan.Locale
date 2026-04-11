@@ -103,7 +103,7 @@ struct SoundMs {//it livs in Message::MES
 		unsigned int packN     = 0       ;
 		unsigned int Size      = 0       ;//this one is float , so size*sizeof(float) , iow : devide the size to 4
 
-		float data [(PACKAT-PACK_HS-9)/4]  ;
+		float data [(PACKAT-PACK_HS-8)/4]  ;
 }__attribute__((packed)) ;
 
 
@@ -217,7 +217,7 @@ public:
 	unsigned int msPtr  ;
 	unsigned int msSize ;
 
-	
+	io_context* io;	
 
 	bool MsgIsIt(unsigned int type);
 	
