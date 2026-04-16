@@ -1,5 +1,5 @@
 # Plan.Locale
-A cross platform multi-threading pear to pear chating app
+A cross platform multi-threading pear to pear chating app was programed in C++
 
 this  app still on alpha, aka prototype, aka not stabel
 
