@@ -20,4 +20,4 @@ it can:
 
 the code it selfe is expermentale, but i still devolping it to make it as stabel as posible
 
-tbh, what do you think, i speed run makeing it for a competition, and it is the probably the worst code that i ever made
+tbh, what do you think, i speed run makeing it for a competition, and it is probably the worst code that i ever made
