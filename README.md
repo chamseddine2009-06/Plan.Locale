@@ -19,3 +19,5 @@ it can:
 *AND No Server betwen them, you device is a server and a cleint in the same time*
 
 the code it selfe is expermentale, but i still devolping it to make it as stabel as posible
+
+tbh, what do you think, i speed run makeing it for a competition, and it is the probably the worst code that i ever made
