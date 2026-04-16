@@ -1,5 +1,5 @@
 # Plan.Locale
-<img src="Picturs/p1.png" width="400"></img>
+<img src="Picturs/p1.png"></img>
 
 A cross platform multi-threading pear to pear chating app was programed in C++
 
