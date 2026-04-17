@@ -1038,4 +1038,5 @@ CMakeFiles/main.dir/cApp.cpp.o: \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
  /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.hpp \
- /usr/local/include/portaudio.h
+ /usr/local/include/portaudio.h \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.hpp

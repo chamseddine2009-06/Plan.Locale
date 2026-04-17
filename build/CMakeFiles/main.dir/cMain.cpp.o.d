@@ -1035,4 +1035,5 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.hpp \
  /usr/local/include/portaudio.h \
  /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/screenCapturing.hpp \
- /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/cApp.h
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/cApp.h \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.hpp
