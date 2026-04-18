@@ -971,8 +971,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -982,13 +982,14 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e09b4/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_e09b4.dir/build.make CMakeFiles/cmTC_e09b4.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD'
-        Building C object CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_12bbc/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2'
+        /usr/bin/make  -f CMakeFiles/cmTC_12bbc.dir/build.make CMakeFiles/cmTC_12bbc.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2'
+        Building C object CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         Target: x86_64-pc-linux-gnu
@@ -996,8 +997,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20260209 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e09b4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccNTXOyY.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12bbc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccFf3LgM.s
         GNU C23 (GCC) version 15.2.1 20260209 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20260209, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1012,14 +1013,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 4a3176b8a5098bb872007d0a1d5e5fb3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/'
-         as -v --64 -o CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o /tmp/ccNTXOyY.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/'
+         as -v --64 -o CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o /tmp/ccFf3LgM.s
         GNU assembler version 2.46 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_e09b4
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e09b4.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_12bbc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12bbc.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -1030,14 +1031,15 @@ events:
         gcc version 15.2.1 20260209 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e09b4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e09b4.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUpSXov.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e09b4 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12bbc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12bbc.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMARkDR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12bbc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20260209
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUpSXov.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e09b4 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMARkDR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12bbc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e09b4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e09b4.'
-        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -o cmTC_e09b4
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12bbc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12bbc.'
+        /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -o cmTC_12bbc
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2'
         
       exitCode: 0
   -
@@ -1072,13 +1074,14 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD']
+        ignore line: [Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e09b4/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_e09b4.dir/build.make CMakeFiles/cmTC_e09b4.dir/build]
-        ignore line: [make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-DpAuKD']
-        ignore line: [Building C object CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_12bbc/fast]
+        ignore line: [make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_12bbc.dir/build.make CMakeFiles/cmTC_12bbc.dir/build]
+        ignore line: [make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-CGU0X2']
+        ignore line: [Building C object CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1086,8 +1089,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20260209 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e09b4.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccNTXOyY.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_12bbc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccFf3LgM.s]
         ignore line: [GNU C23 (GCC) version 15.2.1 20260209 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20260209  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1102,14 +1105,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4a3176b8a5098bb872007d0a1d5e5fb3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o /tmp/ccNTXOyY.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o /tmp/ccFf3LgM.s]
         ignore line: [GNU assembler version 2.46 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_e09b4]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e09b4.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_12bbc]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12bbc.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -1120,13 +1123,13 @@ events:
         ignore line: [gcc version 15.2.1 20260209 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e09b4' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e09b4.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUpSXov.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e09b4 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_12bbc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_12bbc.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMARkDR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12bbc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccUpSXov.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccMARkDR.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1141,7 +1144,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_e09b4] ==> ignore
+          arg [cmTC_12bbc] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -1153,7 +1156,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -1168,7 +1171,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20260209]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUpSXov.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_e09b4 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_e09b4.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMARkDR.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_12bbc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_12bbc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -1205,8 +1208,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1217,13 +1220,14 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3b6b3/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_3b6b3.dir/build.make CMakeFiles/cmTC_3b6b3.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa'
-        Building CXX object CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_51c48/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv'
+        /usr/bin/make  -f CMakeFiles/cmTC_51c48.dir/build.make CMakeFiles/cmTC_51c48.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv'
+        Building CXX object CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -1231,8 +1235,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.1 20260209 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_3b6b3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccqhJXKh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_51c48.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccy9y3T6.s
         GNU C++17 (GCC) version 15.2.1 20260209 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 15.2.1 20260209, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1250,14 +1254,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 5e3969de92aa3c12a625237f01b15b2f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/'
-         as -v --64 -o CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccqhJXKh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/'
+         as -v --64 -o CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccy9y3T6.s
         GNU assembler version 2.46 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_3b6b3
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b6b3.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_51c48
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51c48.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper
@@ -1268,14 +1272,15 @@ events:
         gcc version 15.2.1 20260209 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3b6b3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3b6b3.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0gDlu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3b6b3 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51c48' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_51c48.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5JadM5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51c48 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         collect2 version 15.2.1 20260209
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0gDlu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3b6b3 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5JadM5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51c48 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3b6b3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3b6b3.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_3b6b3
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51c48' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_51c48.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_51c48
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv'
         
       exitCode: 0
   -
@@ -1316,13 +1321,14 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa']
+        ignore line: [Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_3b6b3/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_3b6b3.dir/build.make CMakeFiles/cmTC_3b6b3.dir/build]
-        ignore line: [make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-XevSUa']
-        ignore line: [Building CXX object CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_51c48/fast]
+        ignore line: [make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_51c48.dir/build.make CMakeFiles/cmTC_51c48.dir/build]
+        ignore line: [make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-Nxkmcv']
+        ignore line: [Building CXX object CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1330,8 +1336,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.1 20260209 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_3b6b3.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccqhJXKh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_51c48.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccy9y3T6.s]
         ignore line: [GNU C++17 (GCC) version 15.2.1 20260209 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.1 20260209  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1349,14 +1355,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 5e3969de92aa3c12a625237f01b15b2f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccqhJXKh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccy9y3T6.s]
         ignore line: [GNU assembler version 2.46 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.46]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_3b6b3]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b6b3.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_51c48]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51c48.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper]
@@ -1367,13 +1373,13 @@ events:
         ignore line: [gcc version 15.2.1 20260209 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_3b6b3' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_3b6b3.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0gDlu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3b6b3 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51c48' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_51c48.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5JadM5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51c48 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccg0gDlu.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc5JadM5.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1388,7 +1394,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_3b6b3] ==> ignore
+          arg [cmTC_51c48] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o]
@@ -1400,7 +1406,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1411,7 +1417,7 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         ignore line: [collect2 version 15.2.1 20260209]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccg0gDlu.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3b6b3 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_3b6b3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cc5JadM5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51c48 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_51c48.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -13670,8 +13676,8 @@ events:
     checks:
       - "Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13681,17 +13687,19 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eebc4/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_eebc4.dir/build.make CMakeFiles/cmTC_eebc4.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D'
-        Building C object CMakeFiles/cmTC_eebc4.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_eebc4.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D/CheckFunctionExists.c"
-        Linking C executable cmTC_eebc4
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eebc4.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_eebc4.dir/CheckFunctionExists.c.o -o cmTC_eebc4  /usr/lib/libX11.so /usr/lib/libXext.so
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-ZmZw1D'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ae10c/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn'
+        /usr/bin/make  -f CMakeFiles/cmTC_ae10c.dir/build.make CMakeFiles/cmTC_ae10c.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn'
+        Building C object CMakeFiles/cmTC_ae10c.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -o CMakeFiles/cmTC_ae10c.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn/CheckFunctionExists.c"
+        Linking C executable cmTC_ae10c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae10c.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_ae10c.dir/CheckFunctionExists.c.o -o cmTC_ae10c  /usr/lib/libX11.so /usr/lib/libXext.so
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nYEIwn'
         
       exitCode: 0
   -
@@ -13703,8 +13711,8 @@ events:
     checks:
       - "Looking for gethostbyname"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13714,17 +13722,19 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_59807/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_59807.dir/build.make CMakeFiles/cmTC_59807.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5'
-        Building C object CMakeFiles/cmTC_59807.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_59807.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5/CheckFunctionExists.c"
-        Linking C executable cmTC_59807
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59807.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_59807.dir/CheckFunctionExists.c.o -o cmTC_59807
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-nGrqT5'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_54f4b/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY'
+        /usr/bin/make  -f CMakeFiles/cmTC_54f4b.dir/build.make CMakeFiles/cmTC_54f4b.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY'
+        Building C object CMakeFiles/cmTC_54f4b.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -o CMakeFiles/cmTC_54f4b.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY/CheckFunctionExists.c"
+        Linking C executable cmTC_54f4b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54f4b.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_54f4b.dir/CheckFunctionExists.c.o -o cmTC_54f4b
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-UEaNMY'
         
       exitCode: 0
   -
@@ -13736,8 +13746,8 @@ events:
     checks:
       - "Looking for connect"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13747,17 +13757,19 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f8317/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_f8317.dir/build.make CMakeFiles/cmTC_f8317.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM'
-        Building C object CMakeFiles/cmTC_f8317.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_f8317.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM/CheckFunctionExists.c"
-        Linking C executable cmTC_f8317
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8317.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_f8317.dir/CheckFunctionExists.c.o -o cmTC_f8317
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-jisGVM'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d7c81/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx'
+        /usr/bin/make  -f CMakeFiles/cmTC_d7c81.dir/build.make CMakeFiles/cmTC_d7c81.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx'
+        Building C object CMakeFiles/cmTC_d7c81.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -o CMakeFiles/cmTC_d7c81.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx/CheckFunctionExists.c"
+        Linking C executable cmTC_d7c81
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7c81.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_d7c81.dir/CheckFunctionExists.c.o -o cmTC_d7c81
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-PCueLx'
         
       exitCode: 0
   -
@@ -13769,8 +13781,8 @@ events:
     checks:
       - "Looking for remove"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13780,17 +13792,19 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_31f95/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_31f95.dir/build.make CMakeFiles/cmTC_31f95.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i'
-        Building C object CMakeFiles/cmTC_31f95.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_31f95.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i/CheckFunctionExists.c"
-        Linking C executable cmTC_31f95
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31f95.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_31f95.dir/CheckFunctionExists.c.o -o cmTC_31f95
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-BJsa8i'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_acf3c/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe'
+        /usr/bin/make  -f CMakeFiles/cmTC_acf3c.dir/build.make CMakeFiles/cmTC_acf3c.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe'
+        Building C object CMakeFiles/cmTC_acf3c.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -o CMakeFiles/cmTC_acf3c.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe/CheckFunctionExists.c"
+        Linking C executable cmTC_acf3c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acf3c.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_acf3c.dir/CheckFunctionExists.c.o -o cmTC_acf3c
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-hbebbe'
         
       exitCode: 0
   -
@@ -13802,8 +13816,8 @@ events:
     checks:
       - "Looking for shmat"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13813,17 +13827,19 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_66d39/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_66d39.dir/build.make CMakeFiles/cmTC_66d39.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE'
-        Building C object CMakeFiles/cmTC_66d39.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_66d39.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE/CheckFunctionExists.c"
-        Linking C executable cmTC_66d39
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66d39.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_66d39.dir/CheckFunctionExists.c.o -o cmTC_66d39
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-E289HE'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_96321/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw'
+        /usr/bin/make  -f CMakeFiles/cmTC_96321.dir/build.make CMakeFiles/cmTC_96321.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw'
+        Building C object CMakeFiles/cmTC_96321.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -o CMakeFiles/cmTC_96321.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw/CheckFunctionExists.c"
+        Linking C executable cmTC_96321
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96321.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_96321.dir/CheckFunctionExists.c.o -o cmTC_96321
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-gSAdWw'
         
       exitCode: 0
   -
@@ -13835,8 +13851,8 @@ events:
     checks:
       - "Looking for IceConnectionNumber in ICE"
     directories:
-      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii"
-      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii"
+      source: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9"
+      binary: "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9"
     cmakeVariables:
       CMAKE_CXX_STDLIB_MODULES_JSON: ""
       CMAKE_C_FLAGS: ""
@@ -13846,17 +13862,19 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii'
+        Change Dir: '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b3e64/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_b3e64.dir/build.make CMakeFiles/cmTC_b3e64.dir/build
-        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii'
-        Building C object CMakeFiles/cmTC_b3e64.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_b3e64.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii/CheckFunctionExists.c"
-        Linking C executable cmTC_b3e64
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3e64.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_b3e64.dir/CheckFunctionExists.c.o -o cmTC_b3e64  -lICE
-        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-MHeYii'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_41f07/fast
+        make[1]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9'
+        /usr/bin/make  -f CMakeFiles/cmTC_41f07.dir/build.make CMakeFiles/cmTC_41f07.dir/build
+        make[2]: Entering directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9'
+        Building C object CMakeFiles/cmTC_41f07.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -o CMakeFiles/cmTC_41f07.dir/CheckFunctionExists.c.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9/CheckFunctionExists.c"
+        Linking C executable cmTC_41f07
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41f07.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_41f07.dir/CheckFunctionExists.c.o -o cmTC_41f07  -lICE
+        make[2]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9'
+        make[1]: Leaving directory '/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles/CMakeScratch/TryCompile-6h4bU9'
         
       exitCode: 0
   -
@@ -14039,544 +14057,4 @@ events:
         - "/opt"
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
-...
-
----
-events:
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_gtk3u_xrc-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_gtk3u_xrc-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_gtk3u_html-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_gtk3u_html-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_gtk3u_qa-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_gtk3u_qa-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_gtk3u_core-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_gtk3u_core-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_baseu_xml-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_baseu_xml-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_baseu_net-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_baseu_net-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1138 (find_library)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "library"
-    variable: "_wx_lib_found"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx_baseu-3.2"
-    candidate_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/lib/"
-      - "/usr/X11R6/lib/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/lib/"
-      - "/usr/pkg/"
-      - "/opt/lib/"
-      - "/opt/"
-      - "/usr/lib/X11/"
-    searched_directories:
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/usr/local/sbin/"
-      - "/var/lib/flatpak/exports/bin/"
-      - "/usr/bin/site_perl/"
-      - "/usr/bin/vendor_perl/"
-      - "/usr/bin/core_perl/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-    found: "/usr/lib/libwx_baseu-3.2.so"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:374 (find_file)"
-      - "/usr/share/cmake/Modules/FindwxWidgets.cmake:1157 (wx_extract_version)"
-      - "CMakeLists.txt:10 (find_package)"
-    mode: "file"
-    variable: "_wx_filename"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "wx/version.h"
-    candidate_directories:
-      - "/usr/lib/wx/include/gtk3-unicode-3.2/"
-      - "/usr/include/wx-3.2/"
-    searched_directories:
-      - "/usr/lib/wx/include/gtk3-unicode-3.2/wx/version.h"
-    found: "/usr/include/wx-3.2/wx/version.h"
-    search_context:
-      ENV{PATH}:
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/usr/local/sbin"
-        - "/var/lib/flatpak/exports/bin"
-        - "/usr/bin/site_perl"
-        - "/usr/bin/vendor_perl"
-        - "/usr/bin/core_perl"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_SYSTEM_INCLUDE_PATH:
-        - "/usr/include/X11"
 ...
