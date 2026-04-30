@@ -114,10 +114,38 @@ CMakeFiles/main.dir/cMain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/cMain.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/cMain.cpp" -o CMakeFiles/main.dir/cMain.cpp.s
 
+CMakeFiles/main.dir/networking.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/networking.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/networking.cpp
+CMakeFiles/main.dir/networking.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/networking.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/networking.cpp.o -MF CMakeFiles/main.dir/networking.cpp.o.d -o CMakeFiles/main.dir/networking.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/networking.cpp"
+
+CMakeFiles/main.dir/networking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/networking.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/networking.cpp" > CMakeFiles/main.dir/networking.cpp.i
+
+CMakeFiles/main.dir/networking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/networking.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/networking.cpp" -o CMakeFiles/main.dir/networking.cpp.s
+
+CMakeFiles/main.dir/client.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/client.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/client.cpp
+CMakeFiles/main.dir/client.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/client.cpp.o -MF CMakeFiles/main.dir/client.cpp.o.d -o CMakeFiles/main.dir/client.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/client.cpp"
+
+CMakeFiles/main.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/client.cpp" > CMakeFiles/main.dir/client.cpp.i
+
+CMakeFiles/main.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/client.cpp" -o CMakeFiles/main.dir/client.cpp.s
+
 CMakeFiles/main.dir/server.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/server.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/server.cpp
 CMakeFiles/main.dir/server.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/server.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/server.cpp.o -MF CMakeFiles/main.dir/server.cpp.o.d -o CMakeFiles/main.dir/server.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/server.cpp"
 
 CMakeFiles/main.dir/server.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/main.dir/server.cpp.s: cmake_force
 CMakeFiles/main.dir/config.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/config.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/config.cpp
 CMakeFiles/main.dir/config.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/main.dir/config.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/config.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/config.cpp.o -MF CMakeFiles/main.dir/config.cpp.o.d -o CMakeFiles/main.dir/config.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/config.cpp"
 
 CMakeFiles/main.dir/config.cpp.i: cmake_force
@@ -145,7 +173,7 @@ CMakeFiles/main.dir/config.cpp.s: cmake_force
 CMakeFiles/main.dir/login.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/login.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/login.cpp
 CMakeFiles/main.dir/login.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/login.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/login.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/login.cpp.o -MF CMakeFiles/main.dir/login.cpp.o.d -o CMakeFiles/main.dir/login.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/login.cpp"
 
 CMakeFiles/main.dir/login.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/main.dir/login.cpp.s: cmake_force
 CMakeFiles/main.dir/camera.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/camera.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.cpp
 CMakeFiles/main.dir/camera.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/camera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/camera.cpp.o -MF CMakeFiles/main.dir/camera.cpp.o.d -o CMakeFiles/main.dir/camera.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.cpp"
 
 CMakeFiles/main.dir/camera.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/main.dir/camera.cpp.s: cmake_force
 CMakeFiles/main.dir/soundIO.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/soundIO.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.cpp
 CMakeFiles/main.dir/soundIO.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/soundIO.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/main.dir/soundIO.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/soundIO.cpp.o -MF CMakeFiles/main.dir/soundIO.cpp.o.d -o CMakeFiles/main.dir/soundIO.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.cpp"
 
 CMakeFiles/main.dir/soundIO.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/main.dir/soundIO.cpp.s: cmake_force
 CMakeFiles/main.dir/screenCapturing.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/screenCapturing.cpp.o: /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/screenCapturing.cpp
 CMakeFiles/main.dir/screenCapturing.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/screenCapturing.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/main.dir/screenCapturing.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/screenCapturing.cpp.o -MF CMakeFiles/main.dir/screenCapturing.cpp.o.d -o CMakeFiles/main.dir/screenCapturing.cpp.o -c "/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/screenCapturing.cpp"
 
 CMakeFiles/main.dir/screenCapturing.cpp.i: cmake_force
@@ -203,6 +231,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/cApp.cpp.o" \
 "CMakeFiles/main.dir/cMain.cpp.o" \
+"CMakeFiles/main.dir/networking.cpp.o" \
+"CMakeFiles/main.dir/client.cpp.o" \
 "CMakeFiles/main.dir/server.cpp.o" \
 "CMakeFiles/main.dir/config.cpp.o" \
 "CMakeFiles/main.dir/login.cpp.o" \
@@ -216,6 +246,8 @@ main_EXTERNAL_OBJECTS =
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/cApp.cpp.o
 main: CMakeFiles/main.dir/cMain.cpp.o
+main: CMakeFiles/main.dir/networking.cpp.o
+main: CMakeFiles/main.dir/client.cpp.o
 main: CMakeFiles/main.dir/server.cpp.o
 main: CMakeFiles/main.dir/config.cpp.o
 main: CMakeFiles/main.dir/login.cpp.o
@@ -241,7 +273,7 @@ main: /usr/local/lib/libopencv_flann.so.4.14.0
 main: /usr/local/lib/libopencv_imgproc.so.4.14.0
 main: /usr/local/lib/libopencv_core.so.4.14.0
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System (A.N.I.A.B.S)/Test4_Gui_wxWidgets/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

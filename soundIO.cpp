@@ -5,7 +5,7 @@
 #define SOUND_IO_CPP
 #include "soundIO.hpp"
 #include "utils.hpp"
-#include "server.h"
+#include "networking.hpp"
 #include <portaudio.h>
 
 
@@ -15,7 +15,7 @@
 
 
 
-std::vector<float> dataToPlay;
+std::vector<float> dataToPlay; 
 
 int devRec ;
 int devOut ;
@@ -49,7 +49,7 @@ void soundThreadFunction(){
 std::function<void(float* r , unsigned int lng)> readSoundFromMicrophoneHandler = [](auto,auto){return ;};
 
 
-#define SEND_MAX_DES 0.02
+#define SEND_MAX_DES 0.00 //2
 
 
 static int paCallBackReadFromMocrophone(const void* inBuf , void* outBuf , unsigned long framesPerBuf  ,
@@ -69,10 +69,6 @@ static int paCallBackReadFromMocrophone(const void* inBuf , void* outBuf , unsig
 		memcpy(g_soundRecorded, inBuf, FRAME_PER_BUFFUER*CHANEL_NUMBER*sizeof(float));
 		g_soundHaveBeenRecorde=true;
 	}
-	/*for(int i = 0 ; i < framesPerBuf*2 ; i++ ){
-		dataToPlay.push_back(((float*)inBuf)[i]);
-
-	}*/
 	return 0;
 }
 

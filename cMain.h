@@ -91,13 +91,16 @@ public:
 	int CapturingCamera = 0;
 	bool stopCapturing = false;
 	bool allowRecording = true;
+	
 	std::thread cameraCaputringThread;
 	
 	std::vector<wxButton*> btns;
 	bool StopFinding = false;
 	std::thread DevsListThread;
+	
 	bool muteSpekers = false;
 	bool allowSoundRecording = true;
+	
 	wxPanel * Menupanel     ;
 	wxPanel * Body          ;
 	wxPanel * Intrcating    ;

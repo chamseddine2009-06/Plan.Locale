@@ -8,5 +8,20 @@
 #include <opencv2/highgui.hpp>
 #include <string>
 #include <stdio.h>
-int saveImageFromeCamera(std::string file, int camera);
+
+
+extern std::function<void(unsigned int width,unsigned int heigth, unsigned char* data )> cameraCapturingReq;
+
+void CameraStart();
+
+void CameraStart(unsigned int Cn);
+
+void SetCamera(unsigned int ca);
+
+void CameraStop();
+
+void CameraBlankout();
+void CameraReOpen();
+
+
 #endif

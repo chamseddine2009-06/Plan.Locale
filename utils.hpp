@@ -8,6 +8,13 @@
 #include <asio/ts/internet.hpp>
 
 
+#define FREE(x)\
+	if(x==NULL){\
+		std::cout<<"FREE: "<<#x<<" IT IS A BAD ONE ! (=NULL)\n";\
+	}else {\
+		free(x);\
+		x=NULL;\
+	}
 
 
 static void logMsgs(std::string type , std::string msg=""){

@@ -201,6 +201,30 @@ camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/camera.cpp.s
 .PHONY : camera.cpp.s
 
+client.o: client.cpp.o
+.PHONY : client.o
+
+# target to build an object file
+client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/client.cpp.o
+.PHONY : client.cpp.o
+
+client.i: client.cpp.i
+.PHONY : client.i
+
+# target to preprocess a source file
+client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/client.cpp.i
+.PHONY : client.cpp.i
+
+client.s: client.cpp.s
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/client.cpp.s
+.PHONY : client.cpp.s
+
 config.o: config.cpp.o
 .PHONY : config.o
 
@@ -272,6 +296,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+networking.o: networking.cpp.o
+.PHONY : networking.o
+
+# target to build an object file
+networking.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/networking.cpp.o
+.PHONY : networking.cpp.o
+
+networking.i: networking.cpp.i
+.PHONY : networking.i
+
+# target to preprocess a source file
+networking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/networking.cpp.i
+.PHONY : networking.cpp.i
+
+networking.s: networking.cpp.s
+.PHONY : networking.s
+
+# target to generate assembly for a file
+networking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/networking.cpp.s
+.PHONY : networking.cpp.s
 
 screenCapturing.o: screenCapturing.cpp.o
 .PHONY : screenCapturing.o
@@ -363,6 +411,9 @@ help:
 	@echo "... camera.o"
 	@echo "... camera.i"
 	@echo "... camera.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
 	@echo "... config.o"
 	@echo "... config.i"
 	@echo "... config.s"
@@ -372,6 +423,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... networking.o"
+	@echo "... networking.i"
+	@echo "... networking.s"
 	@echo "... screenCapturing.o"
 	@echo "... screenCapturing.i"
 	@echo "... screenCapturing.s"

@@ -5,6 +5,8 @@ main: \
   CMakeFiles/main.dir/main.cpp.o \
   CMakeFiles/main.dir/cApp.cpp.o \
   CMakeFiles/main.dir/cMain.cpp.o \
+  CMakeFiles/main.dir/networking.cpp.o \
+  CMakeFiles/main.dir/client.cpp.o \
   CMakeFiles/main.dir/server.cpp.o \
   CMakeFiles/main.dir/config.cpp.o \
   CMakeFiles/main.dir/login.cpp.o \
@@ -278,7 +280,7 @@ main: \
   /usr/lib/libbrotlicommon.so.1 \
   /usr/lib/libgpg-error.so.0 \
   /usr/lib/libtss2-sys.so.1 \
-  /usr/lib/libopenjph.so.0.26 \
+  /usr/lib/libopenjph.so.0.27 \
   /usr/lib/libicudata.so.78 \
   /usr/lib/libgomp.so.1 \
   /usr/lib/libfftw3.so.3 \
@@ -287,7 +289,7 @@ main: \
   /usr/lib/libglslang-default-resource-limits.so.16 \
   /usr/lib/libvulkan.so.1 \
   /usr/lib/libdovi.so.3 \
-  /usr/lib/libunibreak.so.6 \
+  /usr/lib/libunibreak.so.7 \
   /usr/lib/libsndfile.so.1 \
   /usr/lib/libasyncns.so.0 \
   /usr/lib/libmd.so.0 \
@@ -304,6 +306,10 @@ CMakeFiles/main.dir/main.cpp.o:
 CMakeFiles/main.dir/cApp.cpp.o:
 
 CMakeFiles/main.dir/cMain.cpp.o:
+
+CMakeFiles/main.dir/networking.cpp.o:
+
+CMakeFiles/main.dir/client.cpp.o:
 
 CMakeFiles/main.dir/server.cpp.o:
 
@@ -851,7 +857,7 @@ CMakeFiles/main.dir/screenCapturing.cpp.o:
 
 /usr/lib/libtss2-sys.so.1:
 
-/usr/lib/libopenjph.so.0.26:
+/usr/lib/libopenjph.so.0.27:
 
 /usr/lib/libicudata.so.78:
 
@@ -869,7 +875,7 @@ CMakeFiles/main.dir/screenCapturing.cpp.o:
 
 /usr/lib/libdovi.so.3:
 
-/usr/lib/libunibreak.so.6:
+/usr/lib/libunibreak.so.7:
 
 /usr/lib/libsndfile.so.1:
 

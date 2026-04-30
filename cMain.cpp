@@ -51,12 +51,13 @@
 
 #include "cMain.h"
 #include "login.hpp"
-#include "server.h"
 #include "soundIO.hpp"
 #include "utils.hpp"
 #include <cstdio>
 #include "screenCapturing.hpp"
 #include "cApp.h"
+#include "camera.hpp"
+#include "client.hpp"
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
 //	EVT_BUTTON(1001, cMain::OnButtonClicked)
 wxEND_EVENT_TABLE()
@@ -115,7 +116,6 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 		
 	wxBitmap bitmap("empty.png" , wxBITMAP_TYPE_PNG);
 
-	//imageScreen = new wxBitmap();
 	imageScreen = new wxStaticBitmap(screenVe ,wxID_ANY, bitmap , wxPoint(0,0) );
 	imageScreen->SetParent(screenVe);
 	
@@ -129,21 +129,16 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 	
 	wxPanel* mesages = new wxPanel(mesaging);	
 	
-	//cCanvas* msgScroler = new cCanvas(mesages);			
 	wxScrolledWindow* msgScroler = new wxScrolledWindow(mesages);
 	wxSizer* msgScrollSizer =new wxBoxSizer(wxVERTICAL);
 	
 	msgScroler->SetScrollRate(5, 5);
 
-	//mesages->SetBackgroundColour(wxColour(30,20,10));	
-	//msgScroler->SetBackgroundColour(wxColour(55,55,60));
 
 
 
 	msgScroler->SetSizer(msgScrollSizer);
-	//msgScrollSizer->Layout();
 	
-	//msgScroler->FitInside();	
 	
 	mesageSzr->Add(mesages ,2, wxEXPAND|wxALL,5);
 	
@@ -164,7 +159,6 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 	senderSizer->Layout();
 
 	mesageSzr->Add(sender,0,wxEXPAND|wxLEFT|wxRIGHT);	
-	//mesageSzr->Add(fileSender,wxLEFT,20);
 	mesaging->SetSizer(mesageSzr);
 	mesageSzr->Layout();
 	
@@ -182,33 +176,15 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 
 	DevicesBuPanel = new wxPanel(Body);
  	DevSiz = new wxBoxSizer(wxVERTICAL);
-	//wxScrolledWindow * buttons = new wxScrolledWindow(DevicesBuPanel , wxID_ANY ,wxDefaultPosition, wxSize(60,400));	
-	//DevicesBuPanel->SetBackgroundColour(wxColour(100,100,200));	
 	
 	buttons = new cCanvas(DevicesBuPanel);
 	butonsS = new wxBoxSizer(wxVERTICAL);
-	//buttons->SetScrollRate(5, 5);	
-	
-	
-	/*for(int i = 0 ; i < 50 ; i++){
-		btns[i]= new wxButton(buttons,wxID_ANY,(wxString)(std::string)("Button #"+std::to_string(i)) , wxDefaultPosition , wxDefaultSize);
-		butonsS->Add(btns[i] ,1, wxTOP,5);
-		
-	}
-	buttons->SetRowH(btns[0]->m_height +5);
-	buttons->SetRowCount(50);
-	*/
 
 	buttons->SetSizer(butonsS);
 	butonsS->Layout();
 	
 	buttons->FitInside();
 	
-	//devTarg=new wxTextCtrl(DevicesBuPanel , wxID_ANY ,  "" , wxPoint(0,30),wxSize(300,-1) , wxTE_PROCESS_ENTER);
-	//devTarg->Connect(wxEVT_TEXT_ENTER, (wxObjectEventFunction)&cMain::OnIpMan, NULL,this);
-	
-
-	//DevSiz->Add(devTarg,1,  wxALIGN_RIGHT|wxRIGHT , 10);
 
 
 	DevSiz->Add(buttons ,1,  wxALIGN_RIGHT|wxRIGHT , 10);
@@ -219,7 +195,6 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 
 	BodyS->Add(DevicesBuPanel, wxRIGHT|wxEXPAND , 10);
 	
-	//Body->SetBackgroundColour(wxColour(10,20,70));
 	Body->SetSizerAndFit(BodyS);
 	BodyS->Layout();
 	imageHandlingReq = [&](Image& img,unsigned int id){
@@ -238,9 +213,15 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 	};
 	rootSizer->Add(Body ,1, wxEXPAND);
 		
+
+
 	this->SetSizer(rootSizer);
 	rootSizer->Layout();
 	
+	
+
+
+
 	std::vector<wxStaticText*> v_mesagesStaticText;
 	static unsigned int messaH = 0;
 	readMsgHandlerRequast=[&](char* ms , unsigned int lng, unsigned int ID){
@@ -252,20 +233,9 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 		if(ID==CleintDevID && getConPos(ID)!=-1){
 			CallAfter([=](){
 				std::string popout = cone[getConPos(ID)]->name;
-				popout.append(" , asked : \n");
+				popout.append(" , send : \n");
 				popout.append(msg);
 				wxMessageBox(popout);
-				//wxStaticText* msg_ = new wxStaticText(msgScroler , wxID_ANY , msg.c_str());
-				//v_mesagesStaticText.push_back(msg_);
-				
-				//msgScrollSizer->Add(v_mesagesStaticText[v_mesagesStaticText.size()-1],1,wxEXPAND|wxALIGN_LEFT);
-				//msgScrollSizer->Add(msg_,1,wxEXPAND);
-				//msgScroler->FitInside();
-				//msgScrollSizer->Layout();
-				//msgScroler->Scroll(0, msgScroler->GetScrollRange(wxVERTICAL));
-
-				//this->Layout();
-				//this->Refresh();
 			});
 		}
 
@@ -273,68 +243,24 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 
 
 	//Set up Capturing thread ////////////////////////////////////////////////////////////////////////
-	this->cameraCaputringThread = std::thread([=](){
-		cv::Mat frame;
-		cv::Mat normalRGB;
-		cv::VideoCapture cap;
-
-
-		cap.open(this->CapturingCamera);//,cv::CAP_FFMPEG)
-		int lastCapturingCam = this->CapturingCamera;
-		
-				//rootSizer->LayomsgScrolerut();
-		//static long sycls = 0;
-		while (!this->stopCapturing) {
-			if(cap.isOpened() && allowRecording &&( (CleintDevID!=-1 && getConPos(this->CleintDevID)!=-1) || g_isTacher ) ){
-				cap.read(frame);
-				if(!frame.empty()){
-					
-					cv::cvtColor(frame, normalRGB, cv::COLOR_BGR2RGB);
-					//std::cout<<"\nSending Image to " << CleintDevID;
-					if(!g_isTacher && CleintDevID!=-1 && getConPos(this->CleintDevID)!=-1 ){	
-						std::thread([=]{
-							cone[getConPos(this->CleintDevID)]->sendImage(normalRGB.rows, normalRGB.cols, (unsigned char*)normalRGB.data);
-						}).join();
-					}else if (g_isTacher){
-						for(int i = 0 ; i < cone.size() ; i++){
-							unsigned int IDoftarget = cone[i]->getID();
-							unsigned int heih = normalRGB.rows;
-							unsigned int widt = normalRGB.cols;
-							char* image = (char*)malloc(heih*widt*3);
-							memcpy(image, normalRGB.data,heih*widt*3);
-							std::thread([this,heih,widt,image,i,IDoftarget](){
-								if( i < cone.size() && cone[i]->getID() == IDoftarget){
-									cone[i]->sendImage(heih, widt, (unsigned char*)image);
-
-								}
-								free(image);
-								return ;
-							}).join();
-						}
-					}
-					//imageScreen->SetBitmap( bmp);
-					/*if(!sycls){
-						
-						//this->GetSizer()->Layout();//not working :(
-						IntractSizer->Layout();
-						BodyS->Layout();
-						//Intrcating->SetSizer(IntractSizer);
-						rootSizer->Layout();
-						//this->SetSizerAndFit(rootSizer);
-					}*/
-				};
-			}
-			if(lastCapturingCam != this->CapturingCamera){
-				cap.open(this->CapturingCamera);
-				if(!cap.isOpened()){
-					logMsgsErr("Can-not open Camera #" + std::to_string(this->CapturingCamera));
+	
+	cameraCapturingReq = [&](unsigned int w , unsigned int h , unsigned char* data){
+		//logMsgs("SENDING IMAGE");
+		if(CleintDevID!=-1 && getConPos(this->CleintDevID)!=-1 && !g_isTacher){
+			cone[getConPos(CleintDevID)]->sendImage(h, w,data);	
+		}else if(g_isTacher){
+			for(int i = 0 ; i < cone.size() ; i++){
+				if( i < cone.size() && cone[i]->getID() != -1){
+					cone[i]->sendImage(h, w, data);
 				}
-				lastCapturingCam=this->CapturingCamera;
+				return ;
 			}
-			//sycls++;
+			
 		}
-	});
-	wxTimer* timer = new wxTimer(this);
+
+	};
+	
+		wxTimer* timer = new wxTimer(this);
 
 	
 	Bind(wxEVT_TIMER,[&](wxEvent &e){
@@ -380,7 +306,7 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 	soundHandlerRequast = [&](float* data, unsigned int Size , unsigned int ID){
 		//std::cout<<"Sond have been araved\n";
 		if(ID==this->CleintDevID && !this->muteSpekers && getConPos(this->CleintDevID)!=-1 ){
-			dataToPlay.reserve(Size);
+			//dataToPlay.reserve(Size);
 			for(unsigned int i = 0 ; i < Size; i++){
 				dataToPlay.push_back(data[i]);
 			}
@@ -612,42 +538,6 @@ cMainLogIn::cMainLogIn() : wxFrame(nullptr, wxID_ANY, "LOG IN" , wxDefaultPositi
 
 	rootS->Layout();
 	
-
-	/*wxSizer * grid1 = new wxBoxSizer(wxVERTICAL);	
-	grid1->AddSpacer(100);
-	wxSizer* s1 =new wxBoxSizer(wxHORIZONTAL);
-	s1->Add(welcome,wxSizerFlags().Center());
-	
-	grid1->Add(s1 , wxSizerFlags().Center());
-
-	grid1->AddSpacer(20);
-	
-	wxSizer* s2 =new wxBoxSizer(wxHORIZONTAL);
-
-	s2->Add(discrip , wxSizerFlags().Center());
-	
-	grid1->Add(s2 , wxSizerFlags().Center());
-
-	grid1->AddSpacer(70);
-	wxSizer* s3 =new wxBoxSizer(wxHORIZONTAL);	
-	s3->Add(textBox,wxSizerFlags().Center());
-	grid1->Add(s3 , wxSizerFlags().Center());
-
-	btn1 = new wxButton(this, wxID_ANY , "Next");
-	btn1->Bind(wxEVT_COMMAND_BUTTON_CLICKED,&cMainLogIn::OnButtonClicked,this);
-	grid1->AddSpacer(100);
-	
-	wxSizer* s4 =new wxBoxSizer(wxHORIZONTAL);
-	s4->Add(btn1);
-	s4->AddSpacer(20);
-	grid1->Add(s4,wxSizerFlags().Right());
-	grid1->AddSpacer(20);
-	s1->Layout();
-	s2->Layout();
-	s3->Layout();
-	s4->Layout();
-	this->SetSizerAndFit(grid1);
-	grid1->Layout();*/
 }
 cMainLogIn::~cMainLogIn(){
 

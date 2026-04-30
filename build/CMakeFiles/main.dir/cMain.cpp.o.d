@@ -561,34 +561,17 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
- /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/server.h \
- /usr/include/asio/buffer.hpp /usr/include/asio/detail/array_fwd.hpp \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.hpp \
+ /usr/local/include/portaudio.h \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/utils.hpp \
+ /usr/include/asio.hpp /usr/include/asio/any_completion_executor.hpp \
+ /usr/include/asio/execution.hpp \
+ /usr/include/asio/execution/allocator.hpp \
  /usr/include/asio/detail/type_traits.hpp \
- /usr/include/asio/is_contiguous_iterator.hpp \
- /usr/include/asio/detail/is_buffer_sequence.hpp \
- /usr/include/asio/io_context.hpp /usr/include/asio/async_result.hpp \
- /usr/include/asio/default_completion_token.hpp \
- /usr/include/asio/deferred.hpp /usr/include/asio/associator.hpp \
- /usr/include/asio/detail/utility.hpp /usr/include/asio/impl/deferred.hpp \
- /usr/include/asio/detail/chrono.hpp \
- /usr/include/asio/detail/concurrency_hint.hpp \
- /usr/include/asio/detail/noncopyable.hpp \
- /usr/include/asio/detail/wrapped_handler.hpp \
- /usr/include/asio/detail/bind_handler.hpp \
- /usr/include/asio/detail/handler_cont_helpers.hpp \
- /usr/include/asio/handler_continuation_hook.hpp \
- /usr/include/asio/detail/initiate_dispatch.hpp \
- /usr/include/asio/associated_allocator.hpp \
- /usr/include/asio/detail/functional.hpp \
- /usr/include/asio/associated_executor.hpp \
  /usr/include/asio/execution/executor.hpp \
  /usr/include/asio/execution/invocable_archetype.hpp \
  /usr/include/asio/traits/equality_comparable.hpp \
  /usr/include/asio/traits/execute_member.hpp \
- /usr/include/asio/is_executor.hpp \
- /usr/include/asio/detail/is_executor.hpp \
- /usr/include/asio/system_executor.hpp /usr/include/asio/execution.hpp \
- /usr/include/asio/execution/allocator.hpp \
  /usr/include/asio/is_applicable_property.hpp \
  /usr/include/asio/traits/query_static_constexpr_member.hpp \
  /usr/include/asio/traits/static_query.hpp \
@@ -600,12 +583,15 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/recycling_allocator.hpp \
  /usr/include/asio/detail/thread_context.hpp \
  /usr/include/asio/detail/call_stack.hpp \
+ /usr/include/asio/detail/noncopyable.hpp \
  /usr/include/asio/detail/tss_ptr.hpp \
  /usr/include/asio/detail/keyword_tss_ptr.hpp \
  /usr/include/asio/detail/impl/thread_context.ipp \
  /usr/include/asio/detail/thread_info_base.hpp \
  /usr/include/asio/multiple_exceptions.hpp \
  /usr/include/asio/impl/multiple_exceptions.ipp \
+ /usr/include/asio/associated_allocator.hpp \
+ /usr/include/asio/associator.hpp /usr/include/asio/detail/functional.hpp \
  /usr/include/asio/detail/non_const_lvalue.hpp \
  /usr/include/asio/detail/scoped_ptr.hpp \
  /usr/include/asio/execution/bad_executor.hpp \
@@ -633,6 +619,30 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/execution/outstanding_work.hpp \
  /usr/include/asio/execution/prefer_only.hpp \
  /usr/include/asio/execution/relationship.hpp \
+ /usr/include/asio/impl/any_completion_executor.ipp \
+ /usr/include/asio/any_completion_executor.hpp \
+ /usr/include/asio/any_completion_handler.hpp \
+ /usr/include/asio/any_io_executor.hpp \
+ /usr/include/asio/execution_context.hpp \
+ /usr/include/asio/impl/execution_context.hpp \
+ /usr/include/asio/detail/handler_type_requirements.hpp \
+ /usr/include/asio/async_result.hpp \
+ /usr/include/asio/default_completion_token.hpp \
+ /usr/include/asio/deferred.hpp /usr/include/asio/detail/utility.hpp \
+ /usr/include/asio/impl/deferred.hpp \
+ /usr/include/asio/detail/service_registry.hpp \
+ /usr/include/asio/detail/impl/service_registry.hpp \
+ /usr/include/asio/detail/impl/service_registry.ipp \
+ /usr/include/asio/impl/execution_context.ipp \
+ /usr/include/asio/impl/any_io_executor.ipp \
+ /usr/include/asio/associated_cancellation_slot.hpp \
+ /usr/include/asio/cancellation_signal.hpp \
+ /usr/include/asio/cancellation_type.hpp \
+ /usr/include/asio/impl/cancellation_signal.ipp \
+ /usr/include/asio/associated_executor.hpp \
+ /usr/include/asio/is_executor.hpp \
+ /usr/include/asio/detail/is_executor.hpp \
+ /usr/include/asio/system_executor.hpp \
  /usr/include/asio/impl/system_executor.hpp \
  /usr/include/asio/detail/executor_op.hpp \
  /usr/include/asio/detail/fenced_block.hpp \
@@ -645,13 +655,6 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/posix_global.hpp \
  /usr/include/asio/system_context.hpp \
  /usr/include/asio/detail/scheduler.hpp \
- /usr/include/asio/execution_context.hpp \
- /usr/include/asio/impl/execution_context.hpp \
- /usr/include/asio/detail/handler_type_requirements.hpp \
- /usr/include/asio/detail/service_registry.hpp \
- /usr/include/asio/detail/impl/service_registry.hpp \
- /usr/include/asio/detail/impl/service_registry.ipp \
- /usr/include/asio/impl/execution_context.ipp \
  /usr/include/asio/detail/conditionally_enabled_event.hpp \
  /usr/include/asio/detail/conditionally_enabled_mutex.hpp \
  /usr/include/asio/detail/null_event.hpp \
@@ -662,6 +665,7 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/impl/posix_thread.ipp \
  /usr/include/asio/detail/impl/scheduler.ipp /usr/include/asio/config.hpp \
  /usr/include/asio/impl/config.hpp /usr/include/asio/impl/config.ipp \
+ /usr/include/asio/detail/concurrency_hint.hpp \
  /usr/include/asio/detail/limits.hpp \
  /usr/include/asio/detail/scheduler_thread_info.hpp \
  /usr/include/asio/detail/signal_blocker.hpp \
@@ -685,29 +689,42 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/bits/epoll.h /usr/include/asio/detail/thread_group.hpp \
  /usr/include/asio/impl/system_context.hpp \
  /usr/include/asio/impl/system_context.ipp \
+ /usr/include/asio/associated_immediate_executor.hpp \
+ /usr/include/asio/cancellation_state.hpp \
+ /usr/include/asio/recycling_allocator.hpp \
+ /usr/include/asio/any_io_executor.hpp /usr/include/asio/append.hpp \
+ /usr/include/asio/impl/append.hpp \
+ /usr/include/asio/detail/handler_cont_helpers.hpp \
+ /usr/include/asio/handler_continuation_hook.hpp \
+ /usr/include/asio/detail/initiation_base.hpp \
+ /usr/include/asio/as_tuple.hpp /usr/include/asio/impl/as_tuple.hpp \
+ /usr/include/asio/associated_allocator.hpp \
+ /usr/include/asio/associated_cancellation_slot.hpp \
+ /usr/include/asio/associated_executor.hpp \
+ /usr/include/asio/associated_immediate_executor.hpp \
+ /usr/include/asio/associator.hpp /usr/include/asio/async_result.hpp \
+ /usr/include/asio/awaitable.hpp \
+ /usr/include/asio/basic_datagram_socket.hpp \
+ /usr/include/asio/basic_socket.hpp \
+ /usr/include/asio/detail/io_object_impl.hpp \
+ /usr/include/asio/io_context.hpp /usr/include/asio/detail/chrono.hpp \
+ /usr/include/asio/detail/wrapped_handler.hpp \
+ /usr/include/asio/detail/bind_handler.hpp \
+ /usr/include/asio/detail/initiate_dispatch.hpp \
  /usr/include/asio/detail/work_dispatcher.hpp \
  /usr/include/asio/executor_work_guard.hpp \
  /usr/include/asio/impl/io_context.hpp \
  /usr/include/asio/detail/completion_handler.hpp \
  /usr/include/asio/detail/handler_work.hpp \
- /usr/include/asio/associated_immediate_executor.hpp \
- /usr/include/asio/impl/io_context.ipp /usr/include/asio/ip/address.hpp \
- /usr/include/asio/ip/address_v6.hpp \
- /usr/include/asio/ip/impl/address_v6.hpp \
- /usr/include/asio/ip/impl/address_v6.ipp \
- /usr/include/asio/ip/bad_address_cast.hpp \
- /usr/include/asio/ip/impl/address.hpp \
- /usr/include/asio/ip/impl/address.ipp /usr/include/asio/ip/tcp.hpp \
- /usr/include/asio/basic_socket_acceptor.hpp \
- /usr/include/asio/any_io_executor.hpp \
- /usr/include/asio/impl/any_io_executor.ipp \
- /usr/include/asio/basic_socket.hpp \
- /usr/include/asio/detail/io_object_impl.hpp /usr/include/asio/post.hpp \
+ /usr/include/asio/impl/io_context.ipp /usr/include/asio/post.hpp \
  /usr/include/asio/detail/initiate_post.hpp \
  /usr/include/asio/socket_base.hpp \
  /usr/include/asio/detail/io_control.hpp \
  /usr/include/asio/detail/socket_option.hpp \
  /usr/include/asio/detail/reactive_socket_service.hpp \
+ /usr/include/asio/buffer.hpp /usr/include/asio/detail/array_fwd.hpp \
+ /usr/include/asio/is_contiguous_iterator.hpp \
+ /usr/include/asio/detail/is_buffer_sequence.hpp \
  /usr/include/asio/detail/buffer_sequence_adapter.hpp \
  /usr/include/asio/registered_buffer.hpp \
  /usr/include/asio/detail/impl/buffer_sequence_adapter.ipp \
@@ -718,78 +735,11 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/reactive_socket_recvfrom_op.hpp \
  /usr/include/asio/detail/reactive_socket_sendto_op.hpp \
  /usr/include/asio/detail/reactive_socket_service_base.hpp \
- /usr/include/asio/associated_cancellation_slot.hpp \
- /usr/include/asio/cancellation_signal.hpp \
- /usr/include/asio/cancellation_type.hpp \
- /usr/include/asio/impl/cancellation_signal.ipp \
  /usr/include/asio/detail/reactive_socket_recv_op.hpp \
  /usr/include/asio/detail/reactive_socket_recvmsg_op.hpp \
  /usr/include/asio/detail/reactive_socket_send_op.hpp \
  /usr/include/asio/detail/reactive_wait_op.hpp \
  /usr/include/asio/detail/impl/reactive_socket_service_base.ipp \
- /usr/include/asio/basic_socket_iostream.hpp \
- /usr/include/asio/basic_socket_streambuf.hpp \
- /usr/include/asio/basic_stream_socket.hpp \
- /usr/include/asio/steady_timer.hpp \
- /usr/include/asio/basic_waitable_timer.hpp \
- /usr/include/asio/detail/chrono_time_traits.hpp \
- /usr/include/asio/detail/deadline_timer_service.hpp \
- /usr/include/asio/detail/timer_queue.hpp \
- /usr/include/asio/detail/date_time_fwd.hpp \
- /usr/include/asio/detail/timer_scheduler.hpp \
- /usr/include/asio/detail/timer_scheduler_fwd.hpp \
- /usr/include/asio/detail/wait_handler.hpp \
- /usr/include/asio/wait_traits.hpp \
- /usr/include/asio/ip/basic_endpoint.hpp \
- /usr/include/asio/ip/detail/endpoint.hpp \
- /usr/include/asio/ip/detail/impl/endpoint.ipp \
- /usr/include/asio/ip/impl/basic_endpoint.hpp \
- /usr/include/asio/ip/basic_resolver.hpp \
- /usr/include/asio/ip/basic_resolver_iterator.hpp \
- /usr/include/asio/ip/basic_resolver_entry.hpp \
- /usr/include/asio/ip/basic_resolver_query.hpp \
- /usr/include/asio/ip/resolver_query_base.hpp \
- /usr/include/asio/ip/resolver_base.hpp \
- /usr/include/asio/ip/basic_resolver_results.hpp \
- /usr/include/asio/detail/resolver_service.hpp \
- /usr/include/asio/detail/resolve_endpoint_op.hpp \
- /usr/include/asio/detail/resolve_op.hpp \
- /usr/include/asio/detail/resolve_query_op.hpp \
- /usr/include/asio/detail/resolver_service_base.hpp \
- /usr/include/asio/detail/resolver_thread_pool.hpp \
- /usr/include/asio/detail/impl/resolver_thread_pool.ipp \
- /usr/include/asio/detail/impl/resolver_service_base.ipp \
- /usr/include/asio/strand.hpp \
- /usr/include/asio/detail/strand_executor_service.hpp \
- /usr/include/asio/detail/impl/strand_executor_service.hpp \
- /usr/include/asio/defer.hpp /usr/include/asio/detail/initiate_defer.hpp \
- /usr/include/asio/dispatch.hpp \
- /usr/include/asio/detail/impl/strand_executor_service.ipp \
- /usr/include/asio/io_context_strand.hpp \
- /usr/include/asio/detail/strand_service.hpp \
- /usr/include/asio/detail/impl/strand_service.hpp \
- /usr/include/asio/detail/impl/strand_service.ipp \
- /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
- /usr/include/c++/15.2.1/bits/fs_path.h /usr/include/c++/15.2.1/codecvt \
- /usr/include/c++/15.2.1/bits/fs_dir.h \
- /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/asio.hpp \
- /usr/include/asio/any_completion_executor.hpp \
- /usr/include/asio/impl/any_completion_executor.ipp \
- /usr/include/asio/any_completion_executor.hpp \
- /usr/include/asio/any_completion_handler.hpp \
- /usr/include/asio/cancellation_state.hpp \
- /usr/include/asio/recycling_allocator.hpp \
- /usr/include/asio/any_io_executor.hpp /usr/include/asio/append.hpp \
- /usr/include/asio/impl/append.hpp \
- /usr/include/asio/detail/initiation_base.hpp \
- /usr/include/asio/as_tuple.hpp /usr/include/asio/impl/as_tuple.hpp \
- /usr/include/asio/associated_allocator.hpp \
- /usr/include/asio/associated_cancellation_slot.hpp \
- /usr/include/asio/associated_executor.hpp \
- /usr/include/asio/associated_immediate_executor.hpp \
- /usr/include/asio/associator.hpp /usr/include/asio/async_result.hpp \
- /usr/include/asio/awaitable.hpp \
- /usr/include/asio/basic_datagram_socket.hpp \
  /usr/include/asio/basic_file.hpp /usr/include/asio/basic_io_object.hpp \
  /usr/include/asio/basic_random_access_file.hpp \
  /usr/include/asio/basic_raw_socket.hpp \
@@ -798,6 +748,7 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/descriptor_ops.hpp \
  /usr/include/asio/detail/impl/descriptor_ops.ipp \
  /usr/include/asio/detail/descriptor_read_op.hpp \
+ /usr/include/asio/dispatch.hpp \
  /usr/include/asio/detail/descriptor_write_op.hpp \
  /usr/include/asio/posix/descriptor_base.hpp \
  /usr/include/asio/detail/impl/reactive_descriptor_service.ipp \
@@ -825,6 +776,18 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/basic_socket.hpp \
  /usr/include/asio/basic_socket_acceptor.hpp \
  /usr/include/asio/basic_socket_iostream.hpp \
+ /usr/include/asio/basic_socket_streambuf.hpp \
+ /usr/include/asio/basic_stream_socket.hpp \
+ /usr/include/asio/steady_timer.hpp \
+ /usr/include/asio/basic_waitable_timer.hpp \
+ /usr/include/asio/detail/chrono_time_traits.hpp \
+ /usr/include/asio/detail/deadline_timer_service.hpp \
+ /usr/include/asio/detail/timer_queue.hpp \
+ /usr/include/asio/detail/date_time_fwd.hpp \
+ /usr/include/asio/detail/timer_scheduler.hpp \
+ /usr/include/asio/detail/timer_scheduler_fwd.hpp \
+ /usr/include/asio/detail/wait_handler.hpp \
+ /usr/include/asio/wait_traits.hpp \
  /usr/include/asio/basic_socket_streambuf.hpp \
  /usr/include/asio/basic_stream_file.hpp \
  /usr/include/asio/basic_stream_socket.hpp \
@@ -883,7 +846,8 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/connect_pipe.hpp \
  /usr/include/asio/impl/connect_pipe.ipp /usr/include/asio/consign.hpp \
  /usr/include/asio/impl/consign.hpp /usr/include/asio/coroutine.hpp \
- /usr/include/asio/defer.hpp /usr/include/asio/deferred.hpp \
+ /usr/include/asio/defer.hpp /usr/include/asio/detail/initiate_defer.hpp \
+ /usr/include/asio/deferred.hpp \
  /usr/include/asio/default_completion_token.hpp \
  /usr/include/asio/detached.hpp /usr/include/asio/impl/detached.hpp \
  /usr/include/asio/dispatch.hpp /usr/include/asio/disposition.hpp \
@@ -917,10 +881,20 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/generic/seq_packet_protocol.hpp \
  /usr/include/asio/basic_seq_packet_socket.hpp \
  /usr/include/asio/generic/stream_protocol.hpp \
+ /usr/include/asio/basic_socket_iostream.hpp \
  /usr/include/asio/handler_continuation_hook.hpp \
  /usr/include/asio/high_resolution_timer.hpp \
  /usr/include/asio/immediate.hpp /usr/include/asio/io_context.hpp \
- /usr/include/asio/io_context_strand.hpp /usr/include/asio/ip/address.hpp \
+ /usr/include/asio/io_context_strand.hpp \
+ /usr/include/asio/detail/strand_service.hpp \
+ /usr/include/asio/detail/impl/strand_service.hpp \
+ /usr/include/asio/detail/impl/strand_service.ipp \
+ /usr/include/asio/ip/address.hpp /usr/include/asio/ip/address_v6.hpp \
+ /usr/include/asio/ip/impl/address_v6.hpp \
+ /usr/include/asio/ip/impl/address_v6.ipp \
+ /usr/include/asio/ip/bad_address_cast.hpp \
+ /usr/include/asio/ip/impl/address.hpp \
+ /usr/include/asio/ip/impl/address.ipp /usr/include/asio/ip/address.hpp \
  /usr/include/asio/ip/address_v4.hpp \
  /usr/include/asio/ip/address_v4_iterator.hpp \
  /usr/include/asio/ip/address_v4_range.hpp \
@@ -940,19 +914,39 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/ip/network_v6.hpp \
  /usr/include/asio/ip/bad_address_cast.hpp \
  /usr/include/asio/ip/basic_endpoint.hpp \
+ /usr/include/asio/ip/detail/endpoint.hpp \
+ /usr/include/asio/ip/detail/impl/endpoint.ipp \
+ /usr/include/asio/ip/impl/basic_endpoint.hpp \
  /usr/include/asio/ip/basic_resolver.hpp \
+ /usr/include/asio/ip/basic_resolver_iterator.hpp \
+ /usr/include/asio/ip/basic_resolver_entry.hpp \
+ /usr/include/asio/ip/basic_resolver_query.hpp \
+ /usr/include/asio/ip/resolver_query_base.hpp \
+ /usr/include/asio/ip/resolver_base.hpp \
+ /usr/include/asio/ip/basic_resolver_results.hpp \
+ /usr/include/asio/detail/resolver_service.hpp \
+ /usr/include/asio/detail/resolve_endpoint_op.hpp \
+ /usr/include/asio/detail/resolve_op.hpp \
+ /usr/include/asio/detail/resolve_query_op.hpp \
+ /usr/include/asio/detail/resolver_service_base.hpp \
+ /usr/include/asio/detail/resolver_thread_pool.hpp \
+ /usr/include/asio/detail/impl/resolver_thread_pool.ipp \
+ /usr/include/asio/detail/impl/resolver_service_base.ipp \
  /usr/include/asio/ip/basic_resolver_entry.hpp \
  /usr/include/asio/ip/basic_resolver_iterator.hpp \
  /usr/include/asio/ip/basic_resolver_query.hpp \
  /usr/include/asio/ip/host_name.hpp \
  /usr/include/asio/ip/impl/host_name.ipp \
  /usr/include/asio/ip/host_name.hpp /usr/include/asio/ip/icmp.hpp \
+ /usr/include/asio/ip/basic_endpoint.hpp \
+ /usr/include/asio/ip/basic_resolver.hpp \
  /usr/include/asio/ip/multicast.hpp \
  /usr/include/asio/ip/detail/socket_option.hpp \
  /usr/include/asio/ip/resolver_base.hpp \
  /usr/include/asio/ip/resolver_query_base.hpp \
- /usr/include/asio/ip/tcp.hpp /usr/include/asio/ip/udp.hpp \
- /usr/include/asio/ip/unicast.hpp /usr/include/asio/ip/v6_only.hpp \
+ /usr/include/asio/ip/tcp.hpp /usr/include/asio/basic_socket_acceptor.hpp \
+ /usr/include/asio/ip/udp.hpp /usr/include/asio/ip/unicast.hpp \
+ /usr/include/asio/ip/v6_only.hpp \
  /usr/include/asio/is_applicable_property.hpp \
  /usr/include/asio/is_contiguous_iterator.hpp \
  /usr/include/asio/is_executor.hpp /usr/include/asio/is_read_buffered.hpp \
@@ -1005,6 +999,11 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/detail/blocking_executor_op.hpp \
  /usr/include/asio/impl/thread_pool.ipp \
  /usr/include/asio/steady_timer.hpp /usr/include/asio/strand.hpp \
+ /usr/include/asio/detail/strand_executor_service.hpp \
+ /usr/include/asio/detail/impl/strand_executor_service.hpp \
+ /usr/include/asio/defer.hpp \
+ /usr/include/asio/detail/impl/strand_executor_service.ipp \
+ /usr/include/asio/io_context_strand.hpp \
  /usr/include/asio/stream_file.hpp /usr/include/asio/streambuf.hpp \
  /usr/include/asio/basic_streambuf.hpp \
  /usr/include/asio/system_context.hpp /usr/include/asio/system_error.hpp \
@@ -1029,11 +1028,16 @@ CMakeFiles/main.dir/cMain.cpp.o: \
  /usr/include/asio/write_at.hpp /usr/include/asio/impl/write_at.hpp \
  /usr/include/asio/ts/buffer.hpp /usr/include/asio/read.hpp \
  /usr/include/asio/read_until.hpp /usr/include/asio/ts/internet.hpp \
- /usr/include/asio/ip/udp.hpp /usr/include/asio/ip/v6_only.hpp \
- /usr/include/asio/ip/unicast.hpp /usr/include/asio/ip/multicast.hpp \
- /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/utils.hpp \
- /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/soundIO.hpp \
- /usr/local/include/portaudio.h \
+ /usr/include/asio/ip/tcp.hpp /usr/include/asio/ip/udp.hpp \
+ /usr/include/asio/ip/v6_only.hpp /usr/include/asio/ip/unicast.hpp \
+ /usr/include/asio/ip/multicast.hpp \
  /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/screenCapturing.hpp \
  /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/cApp.h \
- /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.hpp
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/networking.hpp \
+ /usr/include/asio/strand.hpp /usr/include/c++/15.2.1/filesystem \
+ /usr/include/c++/15.2.1/bits/fs_fwd.h \
+ /usr/include/c++/15.2.1/bits/fs_path.h /usr/include/c++/15.2.1/codecvt \
+ /usr/include/c++/15.2.1/bits/fs_dir.h \
+ /usr/include/c++/15.2.1/bits/fs_ops.h \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/camera.hpp \
+ /home/Ayadi/Desktop/projects/Ayadi_Network_Isolation_And_Backup_System\ (A.N.I.A.B.S)/Test4_Gui_wxWidgets/client.hpp
