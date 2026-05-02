@@ -1,5 +1,6 @@
 #ifndef CMAIN
 #define CMAIN
+#include <memory_resource>
 #include <wx/wx.h>
 #include <vector>
 #include <wx/gtk/checkbox.h>
@@ -76,12 +77,6 @@ public:
 	cMain();
 	~cMain();
 
-	//wxButton* btn1 = nullptr;
-	//wxButton* btn2 = nullptr;
-	//wxTextCtrl *textBox = nullptr;
-	//wxListBox* listbox  = nullptr;
-	//wxButton ** btns;
-	
 	Satings* satingswindow = nullptr;
 	bool satingsOpen = false;
 
@@ -92,11 +87,9 @@ public:
 	bool stopCapturing = false;
 	bool allowRecording = true;
 	
-	std::thread cameraCaputringThread;
 	
 	std::vector<wxButton*> btns;
 	bool StopFinding = false;
-	std::thread DevsListThread;
 	
 	bool muteSpekers = false;
 	bool allowSoundRecording = true;
@@ -119,12 +112,12 @@ public:
 	wxTextCtrl* msgTB;
 	
 		
-	std::thread thrd ;
 	wxButton* bt; 
 	unsigned int ConectionsNumber= 0;
 
 	wxTextCtrl *devTarg;
-
+	
+	wxTimer* timer=nullptr;
 	
 
 	void OnDevConButon(wxCommandEvent& evt);

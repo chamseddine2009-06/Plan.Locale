@@ -1,8 +1,0 @@
-+ you have to allow ports
-
-sudo ufw allow 49152/tcp
-sudo ufw allow 49152/udp
-
-if you have windows:
-netsh advfirewall firewall add rule name="MyApp" dir=in action=allow protocol=TCP localport=49152
-netsh advfirewall firewall add rule name="MyApp" dir=in action=allow protocol=UDP localport=49152

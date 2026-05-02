@@ -29,7 +29,6 @@ connection::connection(ip::tcp::socket& skt , io_context &io , std::vector <std:
 
 
 connection::~connection(){
-	io->stop();
 	delete io;
 }
 	
@@ -348,6 +347,7 @@ void connection::sendClose(){
 		logMsgsErr(ec.message());
 		ret=true;
 	}
+	sk.wait(sk.wait_write);
 	closeSocket(sk);
 	return;
 }

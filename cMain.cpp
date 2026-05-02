@@ -260,7 +260,7 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 
 	};
 	
-		wxTimer* timer = new wxTimer(this);
+	timer = new wxTimer(this);
 
 	
 	Bind(wxEVT_TIMER,[&](wxEvent &e){
@@ -361,7 +361,6 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 			this->Layout();
 			this->Refresh();
 			
-			
 		}
 		
 		return ;
@@ -384,23 +383,16 @@ cMain::cMain() : wxFrame(nullptr,wxID_ANY , "Plan.Locale" , wxDefaultPosition , 
 
 
 cMain::~cMain(){
-	this->stopCapturing=true;
-	this->StopFinding = true;
-	this->allowSoundRecording=false;
-	
 	soundIOStop();
-	if(this->cameraCaputringThread.joinable()){
-		this->cameraCaputringThread.join();
+	CameraStop();
+	if(timer){
+		timer->Stop();
 	}
-	
-
-	if(this->DevsListThread.joinable()){
-		this->DevsListThread.join();
-	}
-	if(thrd.joinable()){
-		thrd.join();
-	}
-
+	/*this->stopCapturing=true;
+	this->StopFinding = true;
+	this->allowSoundRecording=false;*/
+	networking_stop();
+	return;
 }
 
 

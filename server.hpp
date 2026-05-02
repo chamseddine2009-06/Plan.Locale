@@ -11,8 +11,7 @@ class server
 {
 public:
 	std::shared_ptr<connection> conction;
-	std::vector<server*>* vecy;
-	unsigned int ID = 0;
+	
 	ip::tcp::socket*skt;
 	Packat *data=nullptr;
 	Packat *resevedData=nullptr;
@@ -46,7 +45,6 @@ public:
 
 	bool MsgIsIt(unsigned int type);
 	
-	unsigned int getVecPos();
 	void CloseHandler     ();
 	void pingHandler      ();
 	void MessageHandler   ();
@@ -60,7 +58,7 @@ public:
 	void close            ();
 	
 public:
-	server(ip::tcp::socket& skt__ , std::shared_ptr<connection>& con , io_context& io ,  std::vector<server*>& vec , unsigned int entry);
+	server(ip::tcp::socket& skt__ , std::shared_ptr<connection>& con , io_context& io);
 	
 	~server();
 
@@ -69,6 +67,6 @@ public:
 };
 
 
-extern std::vector<server*> servers;
+extern std::atomic<unsigned long> server_count;
 
 #endif

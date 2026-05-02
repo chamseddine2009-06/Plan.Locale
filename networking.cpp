@@ -11,9 +11,9 @@
 #include <string>
 #include <thread>
 std::vector<std::shared_ptr<connection>> cone;
-std::vector<server*> servers;
 std::vector<std::shared_ptr<DevInNetwork>> dess;
 
+std::atomic<unsigned long> server_count;
 
 
 
@@ -127,8 +127,7 @@ void addServer(ip::tcp::socket &skt, io_context &io ){
 	unsigned int c = addConection(skt , io);
 	//std::shared_ptr<server> svr = std::make_shared<server>(skt , cone[c],io , servers , servers.size());
 	//unsigned int emP = servers.size();
-	server* svr = new server(skt , cone[c],io , servers , servers.size());
-	servers.push_back(svr);
+	server* svr = new server(skt , cone[c],io );
 	return ;
 }
 
@@ -138,7 +137,7 @@ void ClientHandl(asio::ip::tcp::acceptor *accept , io_context* io){
 			[=](std::error_code ec , asio::ip::tcp::socket socket)
 			{
 				if(!ec){
-					std::cout<<"Cleint connect! @" << servers.size() << "\n";
+					std::cout<<"Cleint connect! @" << server_count << "\n";
 					addServer(socket,*io); 
 
 
@@ -266,6 +265,7 @@ void networking_init(){
 		logMsgs("SERVER THREAD STARTED");
 		serverContext->run();
 		logMsgs("SERVER THREAD CLOSED");
+		return ;
 	});
 	const unsigned int threadsC = std::thread::hardware_concurrency();
 	
@@ -273,18 +273,20 @@ void networking_init(){
 
 	if(threadsC>1){
 		for(unsigned int i = 0 ; i < threadsC-1 ; i++ ){
-			std::thread([&](){
+			std::thread([=](){
 				logMsgs("MAIN_CONTEXT THREAD #"+std::to_string(i) + " --> OPEN");
 				auto w2 = make_work_guard(*mainContext);
 				mainContext->run();
 				logMsgs("MAIN_CONTEXT THREAD #"+std::to_string(i) + " --> CLOSE");
+				return;
 			}).detach();
 		}
 	}else {
 		std::thread([&](){
 				auto w2 = make_work_guard(*mainContext);
-				mainContext->run();}
-		).detach();
+				mainContext->run();
+				return ;
+		}).detach();
 	}
 	ClientHandl(acceptor, mainContext);
 		
@@ -294,6 +296,11 @@ void networking_init(){
 }
 
 void networking_stop(){
+	dess.clear();
+	for(int i = 0 ; i < cone.size() ; i++){
+		cone[i]->sendClose();
+	}
+	cone.clear();	
 	serverContext->stop();
 	mainContext->stop();
 	if(acceptor->is_open()){
@@ -302,6 +309,7 @@ void networking_stop(){
 	if(serverThread.joinable()){
 		serverThread.join();
 	}
+	
 	delete serverContext;
 	delete mainContext;
 	delete acceptor;

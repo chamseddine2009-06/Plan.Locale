@@ -76,14 +76,6 @@ bool server::MsgIsIt(unsigned int a){
 	return data->TYPE == a & data->Mgic ==MAGIC;
 }
 
-unsigned int server::getVecPos(){
-	for(int i = 0 ; i < vecy->size() ; i++ ){
-		if(vecy->at(i)->ID == this->ID){
-			return i;
-		}
-	}
-	return 0;
-}
 void server::pingHandler(){
 	error_code ec;	
 	Packat msg ;
@@ -317,32 +309,31 @@ void server::MessageHandler(){
 
 void server::close(){
 	if(isOpen){
-	isOpen=false;
-	delete skt;
-	unsigned int entry = getVecPos();
+		isOpen=false;
+		delete skt;
 
-	if(SondB!=nullptr){
-	FREE(SondB);
-	SondB=nullptr;
-	}
-	if(mlc!=nullptr){
-	FREE(mlc);
-	mlc=nullptr;
-	}
-	if(ImgB!=nullptr){
-	FREE(ImgB);
-	ImgB=nullptr;
-	}
-	if(Messag_.size())Messag_.erase();
-	if(this->data!=nullptr){
-	FREE(this->data);
-	this->data=nullptr;
-	}
-	if(this->resevedData!=nullptr){
-	FREE(this->resevedData);
-	this->resevedData=nullptr;
-	}
-	this->conction->serverOpnedFromeDestny--;
+		if(SondB!=nullptr){
+		FREE(SondB);
+		SondB=nullptr;
+		}
+		if(mlc!=nullptr){
+		FREE(mlc);
+		mlc=nullptr;
+		}
+		if(ImgB!=nullptr){
+		FREE(ImgB);
+		ImgB=nullptr;
+		}
+		if(Messag_.size())Messag_.erase();
+		if(this->data!=nullptr){
+		FREE(this->data);
+		this->data=nullptr;
+		}
+		if(this->resevedData!=nullptr){
+		FREE(this->resevedData);
+		this->resevedData=nullptr;
+		}
+		this->conction->serverOpnedFromeDestny--;
 	}
 
 	return;
@@ -351,18 +342,10 @@ void server::close(){
 void server::CloseHandler(){
 	closeHandlerRequast(conction->ID);
 	
-	for(int i = this->vecy->size() -1 /*we are her, so vecy cant be -1*/ ; i >=0 ; i--){
-		if(this->vecy->at(i)->skt->remote_endpoint() == this->skt->remote_endpoint() 
-				&& this->vecy->at(i)->ID != this->ID)
-		{
-			this->vecy->at(i)->close();//kill evry one
-		}
-
-	}
-	
 	this->conction->Close();//kill your master
 	
 	this->close();//and then , kill your selfe	
+	delete this;
 	return;	
 }
 
@@ -419,7 +402,6 @@ void server::readHandler(){
 				if(isOpen){	
 					delete skt;
 					isOpen=false;
-					unsigned int entry = getVecPos();	
 					if(SondB!=nullptr){
 						FREE(SondB);
 						SondB=nullptr;
@@ -442,9 +424,7 @@ void server::readHandler(){
 						this->resevedData=nullptr;
 					}
 					this->conction->serverOpnedFromeDestny--;
-					if(entry!=-1){
-						vecy->erase(vecy->begin()+entry);
-					}
+					
 					delete this;
 					//io->stop();
 					//delete this;
@@ -462,20 +442,12 @@ void server::readHandler(){
 
 
 
-server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_context& io , std::vector<server*>& vec , unsigned int entry){
+server::server(ip::tcp::socket &skt , std::shared_ptr<connection>& con , io_context& io ){
 
 	this->conction = con;
-	vecy = &vec;
 	isOpen=true;
 	data=(Packat*)malloc(PACKAT);
-	//resevedData = (Packat*)malloc(PACKAT);
-	unsigned int ID = 0;
-	for(int i = 0 ; i < vecy->size() ;i++ ){
-		if(vecy->at(i)->ID == ID){
-			ID++;
-		}
-	}
-	this->ID = ID;
+	server_count++;	
 	this->conction->serverOpnedFromeDestny++;
 	
 	unsigned int fd = skt.release();
@@ -517,6 +489,11 @@ server::~server(){
 		delete skt;
 		isOpen=false;
 		//io->stop();
+	}
+	if(server_count){
+		server_count--;
+	}else {
+		logMsgs("UN-EXPECTED ERORR","server count = 0 and servers are not");
 	}
 	return;
 }

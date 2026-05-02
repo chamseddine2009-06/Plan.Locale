@@ -15,9 +15,8 @@ cApp::cApp(){
 }
 
 cApp::~cApp(){
-	soundIOStop();
-	CameraStop();
-	networking_stop();
+	logMsgs("CLOSING");
+	return;
 }
 bool cApp::OnInit(){
 		
